@@ -80,31 +80,5 @@
             )
         );
         ?>
-        <!-- <ul class="p-drawer-nav__list">
-            <li class="p-drawer-nav__item">
-                <a class="p-drawer-nav__link" href="#about">
-                    <span class="p-drawer-nav__en">ABOUT</span>
-                    <span class="p-drawer-nav__ja">私について</span>
-                </a>
-            </li>
-            <li class="p-drawer-nav__item">
-                <a class="p-drawer-nav__link" href="#skills">
-                    <span class="p-drawer-nav__en">SKILLS</span>
-                    <span class="p-drawer-nav__ja">できること</span>
-                </a>
-            </li>
-            <li class="p-drawer-nav__item">
-                <a class="p-drawer-nav__link" href="#works">
-                    <span class="p-drawer-nav__en">WORKS</span>
-                    <span class="p-drawer-nav__ja">制作実績</span>
-                </a>
-            </li>
-            <li class="p-drawer-nav__item">
-                <a class="p-drawer-nav__link" href="#contact">
-                    <span class="p-drawer-nav__en">CONTACT</span>
-                    <span class="p-drawer-nav__ja">お問い合わせ</span>
-                </a>
-            </li>
-        </ul> -->
     </nav>
     <!-- /ドロワーナビゲーション -->
