@@ -1,5 +1,29 @@
 <?php
 
+function my_setup()
+{
+    // アイキャッチ画像を有効化
+    add_theme_support('post-thumbnails');
+
+    // RSSフィードリンクの自動生成
+    add_theme_support('automatic-feed-links');
+
+    // タイトルタグ自動生成
+    add_theme_support('title-tag');
+
+    // HTML5の有効化
+    add_theme_support('html5', array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'style',
+        'script',
+    ));
+}
+add_action('after_setup_theme', 'my_setup');
+
 function my_script_init()
 {
     // CSSの読み込み

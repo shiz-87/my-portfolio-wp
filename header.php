@@ -2,23 +2,12 @@
 <html lang="ja">
 
 <head>
-    <!-- 文字コード UTF-8を指定 -->
     <meta charset="UTF-8" />
-
-    <!-- レスポンシブ対応 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- サイトのアイコン設定 -->
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
     <!-- 検索にヒットしないようにする -->
     <meta name="robots" content="noindex" />
-
-    <!-- タイトル & 概要（検索結果や共有時の基礎情報） -->
-    <title>SHIZUKA YAMAMOTO | PORTFOLIO</title>
-    <meta
-        name="description"
-        content="静岡県浜松市在住。Webコーダーへの転職を目指すSHIZUKA YAMAMOTOのポートフォリオサイトです。学習成果としての制作実績やスキルセット（HTML/CSS/WordPress等）を掲載しています。" />
 
     <!-- OGP -->
     <meta property="og:title" content="SHIZUKA YAMAMOTO | PORTFOLIO" />
@@ -26,11 +15,8 @@
         property="og:description"
         content="静岡県浜松市在住。Webコーダーへの転職を目指すSHIZUKA YAMAMOTOのポートフォリオサイトです。学習成果としての制作実績やスキルセット（HTML/CSS/WordPress等）を掲載しています。" />
     <meta property="og:type" content="website" />
-    <!-- 記事ページは article -->
     <meta property="og:url" content="https://example.com/" />
-    <!-- 絶対URL -->
     <meta property="og:image" content="https://example.com/ogp/og-image.jpg" />
-    <!-- 絶対URL -->
     <meta property="og:site_name" content="SHIZUKA YAMAMOTO | PORTFOLIO" />
     <meta property="og:locale" content="ja_JP" />
 
