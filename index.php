@@ -128,7 +128,7 @@
         <div class="p-top-works__inner l-inner">
             <h2 class="p-top-works__title c-section-title u-fade-up">
                 <span class="c-section-title__en">WORKS</span>
-                <span class="c-section-title__ja">つくったもの</span>
+                <span class="c-section-title__ja">作品一覧</span>
             </h2>
 
             <!-- Swiper -->

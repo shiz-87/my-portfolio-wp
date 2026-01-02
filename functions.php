@@ -51,15 +51,13 @@ add_action('after_setup_theme', 'my_menu_init');
  */
 function add_class_to_menu_li($classes, $item, $args)
 {
-    // ヘッダーの場合
     if ($args->theme_location === 'header-nav') {
         $classes[] = 'p-header-nav__item';
-    }
-    // フッターの場合
-    elseif ($args->theme_location === 'footer-nav') {
+    } elseif ($args->theme_location === 'footer-nav') {
         $classes[] = 'p-footer-nav__item';
+    } elseif ($args->theme_location === 'drawer-nav') {
+        $classes[] = 'p-drawer-nav__item';
     }
-
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_class_to_menu_li', 10, 3);
@@ -69,19 +67,41 @@ add_filter('nav_menu_css_class', 'add_class_to_menu_li', 10, 3);
  */
 function add_class_to_menu_a($atts, $item, $args)
 {
-    // ヘッダーの場合
     if ($args->theme_location === 'header-nav') {
         if (in_array('is-button', $item->classes)) {
             $atts['class'] = 'p-header-nav__button c-button';
         } else {
             $atts['class'] = 'p-header-nav__link';
         }
-    }
-    // フッターの場合
-    elseif ($args->theme_location === 'footer-nav') {
+    } elseif ($args->theme_location === 'footer-nav') {
         $atts['class'] = 'p-footer-nav__link';
+    } elseif ($args->theme_location === 'drawer-nav') {
+        $atts['class'] = 'p-drawer-nav__link';
     }
-
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_class_to_menu_a', 10, 3);
+
+/**
+ * ドロワーメニューの中身（HTML）を書き換える
+ */
+function change_drawer_menu_html($item_output, $item, $depth, $args)
+{
+    // ドロワーメニューの時だけ発動
+    if ($args->theme_location === 'drawer-nav') {
+        // ラベル（英語）と説明（日本語）を取得
+        $en = $item->title;
+        $ja = $item->description;
+
+        // HTMLを組み立てる
+        $item_output = '<a class="' . implode(' ', $item->classes) . '" href="' . $item->url . '">';
+        $item_output .= '<span class="p-drawer-nav__en">' . $en . '</span>';
+        if ($ja) { // 説明が入力されている場合のみ表示
+            $item_output .= '<span class="p-drawer-nav__ja">' . $ja . '</span>';
+        }
+        $item_output .= '</a>';
+    }
+    return $item_output;
+}
+// リンクの中身をいじるためのフック
+add_filter('walker_nav_menu_start_el', 'change_drawer_menu_html', 10, 4);

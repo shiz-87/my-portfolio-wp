@@ -52,21 +52,7 @@
                         'items_wrap' => '<ul class="%2$s">%3$s</ul>',
                     )
                 ) ?>
-                <!-- <ul class="p-header-nav__list">
-                    <li class="p-header-nav__item">
-                        <a class="p-header-nav__link" href="#about">ABOUT</a>
-                    </li>
-                    <li class="p-header-nav__item">
-                        <a class="p-header-nav__link" href="#skills">SKILLS</a>
-                    </li>
-                    <li class="p-header-nav__item">
-                        <a class="p-header-nav__link" href="#works">WORKS</a>
-                    </li>
-                    <li class="p-header-nav__item">
-                        <a class="p-header-nav__button c-button" href="#contact">CONTACT</a>
-                    </li>
-                </ul>
-            </nav> -->
+            </nav>
             <!-- /グローバルナビゲーション -->
 
             <!-- ハンバーガーメニュー -->
@@ -85,7 +71,16 @@
 
     <!-- ドロワーナビゲーション -->
     <nav class="p-drawer-nav" aria-label="ドロワーナビゲーション">
-        <ul class="p-drawer-nav__list">
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'drawer-nav',
+                'container'      => false,
+                'menu_class'     => 'p-drawer-nav__list',
+            )
+        );
+        ?>
+        <!-- <ul class="p-drawer-nav__list">
             <li class="p-drawer-nav__item">
                 <a class="p-drawer-nav__link" href="#about">
                     <span class="p-drawer-nav__en">ABOUT</span>
@@ -110,6 +105,6 @@
                     <span class="p-drawer-nav__ja">お問い合わせ</span>
                 </a>
             </li>
-        </ul>
+        </ul> -->
     </nav>
     <!-- /ドロワーナビゲーション -->
