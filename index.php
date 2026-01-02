@@ -44,8 +44,8 @@
     />
 
     <!-- スタイルシート -->
-    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" />
   </head>
   <body>
     <!-- ヘッダー -->
@@ -147,7 +147,7 @@
 
           <div class="p-top-mv__image">
             <img
-              src="./assets/img/mv.svg"
+              src="<?php echo get_template_directory_uri(); ?>/assets/img/mv.svg"
               alt="コーダーのイメージイラスト"
               width="600"
               height="353"
@@ -168,7 +168,7 @@
           <div class="p-top-about__content">
             <div class="p-top-about__image u-fade-up">
               <img
-                src="./assets/img/profile.png"
+                src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.png"
                 alt="山本静華のプロフィール写真"
                 width="400"
                 height="400"
@@ -207,7 +207,7 @@
                 <div class="c-skill-card__header">
                   <div class="c-skill-card__icon c-skill-card__icon--coding">
                     <img
-                      src="./assets/img/icon-coding.svg"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-coding.svg"
                       alt="codingのアイコン"
                       width="80"
                       height="64"
@@ -230,7 +230,7 @@
                 <div class="c-skill-card__header">
                   <div class="c-skill-card__icon c-skill-card__icon--wordpress">
                     <img
-                      src="./assets/img/icon-wordpress.svg"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-wordpress.svg"
                       alt="WordPressのアイコン"
                       width="64"
                       height="64"
@@ -270,7 +270,7 @@
                     <a href="#" class="c-work-card__link">
                       <figure class="c-work-card__image">
                         <img
-                          src="./assets/img/work-dummy01.png"
+                          src="<?php echo get_template_directory_uri(); ?>/assets/img/work-dummy01.png"
                           alt="ポートフォリオサイトのトップページ画像"
                           width="800"
                           height="450"
@@ -300,7 +300,7 @@
                     <a href="#" class="c-work-card__link">
                       <figure class="c-work-card__image">
                         <img
-                          src="./assets/img/works-onomichi-thumb.webp"
+                          src="<?php echo get_template_directory_uri(); ?>/assets/img/works-onomichi-thumb.webp"
                           alt="尾道サイトのトップページ画像"
                           width="800"
                           height="450"
@@ -330,7 +330,7 @@
                     <a href="#" class="c-work-card__link">
                       <figure class="c-work-card__image">
                         <img
-                          src="./assets/img/works-oha-thumb.webp"
+                          src="<?php echo get_template_directory_uri(); ?>/assets/img/works-oha-thumb.webp"
                           alt="OHA!のトップページ画像"
                           width="800"
                           height="450"
@@ -358,7 +358,7 @@
                     <a href="#" class="c-work-card__link">
                       <figure class="c-work-card__image">
                         <img
-                          src="./assets/img/works-sobolon-thumb.webp"
+                          src="<?php echo get_template_directory_uri(); ?>/assets/img/works-sobolon-thumb.webp"
                           alt="Sobolonのトップページ画像"
                           width="800"
                           height="450"
@@ -425,7 +425,7 @@
               >
 
               <img
-                src="./assets/img/icon-arrow-up-right.svg"
+                src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow-up-right.svg"
                 alt=""
                 class="c-email-link__icon"
                 width="24"
@@ -443,7 +443,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="./assets/img/icon-github-white.svg"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-github-white.svg"
                   alt="GitHub"
                   width="56"
                   height="56"
@@ -458,7 +458,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="./assets/img/icon-x-white.svg"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-x-white.svg"
                   alt="X"
                   width="56"
                   height="56"
@@ -512,7 +512,7 @@
     </button>
     <!-- /トップへ戻るボタン -->
 
-    <script defer src="./assets/js/lib/swiper-bundle.min.js"></script>
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/swiper-bundle.min.js"></script>
+    <script defer src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
   </body>
 </html>
