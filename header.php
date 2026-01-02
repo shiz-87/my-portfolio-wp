@@ -42,7 +42,17 @@
 
             <!-- グローバルナビゲーション -->
             <nav class="p-header-nav" aria-label="グローバルナビゲーション">
-                <ul class="p-header-nav__list">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'depth' => 1,
+                        'theme_location' => 'header-nav',
+                        'container' => false,
+                        'menu_class' => 'p-header-nav__list',
+                        'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                    )
+                ) ?>
+                <!-- <ul class="p-header-nav__list">
                     <li class="p-header-nav__item">
                         <a class="p-header-nav__link" href="#about">ABOUT</a>
                     </li>
@@ -56,7 +66,7 @@
                         <a class="p-header-nav__button c-button" href="#contact">CONTACT</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
             <!-- /グローバルナビゲーション -->
 
             <!-- ハンバーガーメニュー -->

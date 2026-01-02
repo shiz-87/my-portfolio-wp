@@ -35,3 +35,41 @@ function my_script_init()
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js', array("jquery"), filemtime(get_theme_file_path('/assets/js/script.js')), true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
+
+function my_menu_init()
+{
+    register_nav_menus(array(
+        'header-nav' => 'ヘッダーナビゲーション',
+        'drawer-nav' => 'ドロワーナビゲーション',
+        'footer-nav' => 'フッターナビゲーション',
+    ));
+}
+add_action('after_setup_theme', 'my_menu_init');
+
+/**
+ * メニューの<li>タグにクラスを付与
+ */
+function add_class_to_menu_li($classes, $item, $args) {
+    if ($args->theme_location === 'header-nav') {
+        $classes[] = 'p-header-nav__item';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_class_to_menu_li', 10, 3);
+
+/**
+ * メニューの<a>タグにクラスを付与
+ */
+function add_class_to_menu_a($atts, $item, $args) {
+    if ($args->theme_location === 'header-nav') {
+        // 管理画面で「is-button」というクラスをつけた場合だけ、ボタン用のクラスにする
+        if (in_array('is-button', $item->classes)) {
+            $atts['class'] = 'p-header-nav__button c-button';
+        } else {
+            // それ以外は通常のリンククラス
+            $atts['class'] = 'p-header-nav__link';
+        }
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_class_to_menu_a', 10, 3);
