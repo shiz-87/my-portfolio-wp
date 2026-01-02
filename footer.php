@@ -38,8 +38,6 @@
     </button>
     <!-- /トップへ戻るボタン -->
 
-    <script defer src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/swiper-bundle.min.js"></script>
-    <script defer src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
     <?php wp_footer(); ?>
     </body>
 
