@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文字コード UTF-8を指定 -->
+    <meta charset="UTF-8" />
+
+    <!-- レスポンシブ対応 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- サイトのアイコン設定 -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <!-- 検索にヒットしないようにする -->
+    <meta name="robots" content="noindex" />
+
+    <!-- タイトル & 概要（検索結果や共有時の基礎情報） -->
+    <title>ABOUT | SHIZUKA YAMAMOTO PORTFOLIO</title>
+    <meta
+      name="description"
+      content="SHIZUKA YAMAMOTOの経歴、Webコーダーとしての強み（Strength）、将来のビジョン（Vision）をご紹介します。妥協しない粘り強さと、使う人を想う想像力を大切に制作を行っています。"
+    />
+
+    <!-- OGP -->
+    <meta property="og:title" content="ABOUT | SHIZUKA YAMAMOTO PORTFOLIO" />
+    <meta
+      property="og:description"
+      content="SHIZUKA YAMAMOTOの経歴、Webコーダーとしての強み（Strength）、将来のビジョン（Vision）をご紹介します。妥協しない粘り強さと、使う人を想う想像力を大切に制作を行っています。"
+    />
+    <meta property="og:type" content="website" />
+    <!-- 記事ページは article -->
+    <meta property="og:url" content="https://example.com/" />
+    <!-- 絶対URL -->
+    <meta property="og:image" content="https://example.com/ogp/og-image.jpg" />
+    <!-- 絶対URL -->
+    <meta property="og:site_name" content="SHIZUKA YAMAMOTO | PORTFOLIO" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header class="l-header">
+      <div class="l-header__inner l-inner">
+        <h1 class="l-header__logo">
+          <a href="#">
+            SHIZUKA<br class="u-hidden-md" />
+            YAMAMOTO</a
+          >
+        </h1>
+
+        <!-- グローバルナビゲーション -->
+        <nav class="p-header-nav" aria-label="グローバルナビゲーション">
+          <ul class="p-header-nav__list">
+            <li class="p-header-nav__item">
+              <a class="p-header-nav__link" href="#about">ABOUT</a>
+            </li>
+            <li class="p-header-nav__item">
+              <a class="p-header-nav__link" href="#skills">SKILLS</a>
+            </li>
+            <li class="p-header-nav__item">
+              <a class="p-header-nav__link" href="#works">WORKS</a>
+            </li>
+            <li class="p-header-nav__item">
+              <a class="p-header-nav__button c-button" href="#contact"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- /グローバルナビゲーション -->
+
+        <!-- ハンバーガーメニュー -->
+        <button
+          class="c-hamburger"
+          id="js-hamburger"
+          aria-label="メニュー開閉ボタン"
+        >
+          <span class="c-hamburger__bar"></span>
+          <span class="c-hamburger__bar"></span>
+          <span class="c-hamburger__bar"></span>
+        </button>
+        <!-- /ハンバーガーメニュー -->
+      </div>
+    </header>
+    <!-- /ヘッダー -->
+
+    <!-- ドロワーナビゲーション -->
+    <nav class="p-drawer-nav" aria-label="ドロワーナビゲーション">
+      <ul class="p-drawer-nav__list">
+        <li class="p-drawer-nav__item">
+          <a class="p-drawer-nav__link" href="#about">
+            <span class="p-drawer-nav__en">ABOUT</span>
+            <span class="p-drawer-nav__ja">私について</span>
+          </a>
+        </li>
+        <li class="p-drawer-nav__item">
+          <a class="p-drawer-nav__link" href="#skills">
+            <span class="p-drawer-nav__en">SKILLS</span>
+            <span class="p-drawer-nav__ja">できること</span>
+          </a>
+        </li>
+        <li class="p-drawer-nav__item">
+          <a class="p-drawer-nav__link" href="#works">
+            <span class="p-drawer-nav__en">WORKS</span>
+            <span class="p-drawer-nav__ja">制作実績</span>
+          </a>
+        </li>
+        <li class="p-drawer-nav__item">
+          <a class="p-drawer-nav__link" href="#contact">
+            <span class="p-drawer-nav__en">CONTACT</span>
+            <span class="p-drawer-nav__ja">お問い合わせ</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /ドロワーナビゲーション -->
+
+    <main class="l-main">
+      <!-- プロフィールセクション -->
+      <section class="p-about-profile">
+        <div class="p-about-profile__inner l-inner">
+          <div class="p-about-profile__image u-fade-up">
+            <img
+              src="./assets/img/profile.png"
+              alt="山本静華のプロフィール写真"
+              width="400"
+              height="400"
+            />
+          </div>
+
+          <div class="p-about-profile__body u-fade-up u-delay-200">
+            <p class="p-about-profile__en">SHIZUKA YAMAMOTO</p>
+            <h2 class="p-about-profile__ja">山本 静<span>華</span></h2>
+            <div class="p-about-profile__text">
+              <p>
+                静岡県浜松市出身。社会人としてキャリアを積む中で、「自分の手で形にし、価値を提供したい」というモノ作りへの強い想いが芽生え、Webコーダーへの転身を決意しました。
+              </p>
+              <p>
+                現在はWeb制作スクール「デイトラ」にて、HTML/CSSはもちろん、Sass（FLOCSS）を用いた保守性の高いコード設計や、WordPressのオリジナルテーマ開発を深く学んでいます。特に「デザインカンプの意図を1px単位で再現するピクセルパーフェクト」へのこだわりと、運用者が迷わない管理画面設計など「現場で通用する実務力」の習得を最優先しています。
+              </p>
+              <p>
+                2025年8月30日の学習開始以来、現職と両立しながら毎日学習を継続し、累計学習時間は420時間を突破しました。実務開始に向け、日々技術のアップデートを怠らず、自走し続ける姿勢を大切にしています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /プロフィールセクション -->
+
+      <!-- Strengthセクション -->
+      <section class="p-about-strength">
+        <div class="p-about-strength__inner l-inner">
+          <div class="p-about-strength__title c-section-title u-fade-up">
+            <span class="c-section-title__en">STRENGTH</span>
+            <span class="c-section-title__ja">強み</span>
+          </div>
+
+          <div class="p-about-strength__card">
+            <ul class="p-about-strength__list">
+              <!-- 強み1つ目 -->
+              <li class="p-about-strength__item u-fade-up">
+                <div class="p-about-strength__head">
+                  <img
+                    src="./assets/img/icon-checked.svg"
+                    alt="チェックマークのアイコン画像"
+                    width="24"
+                    height="24"
+                  />
+                  <h3 class="p-about-strength__term">妥協しない粘り強さ</h3>
+                </div>
+                <p class="p-about-strength__text">
+                  未経験からWeb制作の世界に飛び込みましたが、「わからない」をそのままにせず、納得がいくまでとことん調べるのが私のスタイルです。エラーや新しい技術に直面した際も、単なるコピペで終わらせず「なぜそう動くのか」という根本理解を大切にしています。この粘り強さで、確実な実装を行います。
+                </p>
+              </li>
+
+              <!-- 強み2つ目 -->
+              <li class="p-about-strength__item u-fade-up u-delay-200">
+                <div class="p-about-strength__head">
+                  <img
+                    src="./assets/img/icon-checked.svg"
+                    alt="チェックマークのアイコン画像"
+                    width="24"
+                    height="24"
+                  />
+                  <h3 class="p-about-strength__term">
+                    心身を支える継続力と体力
+                  </h3>
+                </div>
+                <p class="p-about-strength__text">
+                  一度決めた目標は最後までやり抜きます。実はプライベートでも、筋力トレーニングを10年間続けています。トレーニングで培った「コツコツ続ける体力と根気」は、Web制作における地道な修正作業や、長時間のコーディング集中力にも活きています。困難な実装も投げ出さず、しっかりと形にします。
+                </p>
+              </li>
+
+              <!-- 強み3つ目 -->
+              <li class="p-about-strength__item u-fade-up u-delay-400">
+                <div class="p-about-strength__head">
+                  <img
+                    src="./assets/img/icon-checked.svg"
+                    alt="チェックマークのアイコン画像"
+                    width="24"
+                    height="24"
+                  />
+                  <h3 class="p-about-strength__term">使う人を想う想像力</h3>
+                </div>
+                <p class="p-about-strength__text">
+                  日常生活でも「相手の立場だったらどう思うか」を大切にしています。Web制作においても、「自分がお客様ならこの管理画面は使いやすいか」「後任のエンジニアならこのコードは読みやすいか」と常に自問自答を繰り返します。技術力だけでなく、「相手への思いやり」を込めた実装を常に心がけています。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- /Strengthセクション -->
+
+      <!-- Visionセクション -->
+      <section class="p-about-vision">
+        <div class="p-about-vision__inner l-inner">
+          <div class="p-about-vision__title c-section-title u-fade-up">
+            <span class="c-section-title__en">VISION</span>
+            <span class="c-section-title__ja">将来像</span>
+          </div>
+
+          <div class="p-about-vision__content">
+            <ul class="p-about-vision__list">
+              <!-- 将来像1つ目 -->
+              <li class="p-about-vision__item u-fade-up">
+                <div class="p-about-vision__head">
+                  <span class="p-about-vision__year">1年後</span>
+                  <h3 class="p-about-vision__term">
+                    「確実な実装力」で信頼を築く
+                  </h3>
+                </div>
+                <p class="p-about-vision__text">
+                  まずはコーダーとして、正確でミスのない実装を徹底します。開発フローを吸収しながらHTML/CSSの品質を高め、「山本に任せれば大丈夫」と言われる信頼関係をチーム内で築きます。
+                </p>
+              </li>
+
+              <!-- 将来像2つ目 -->
+              <li class="p-about-vision__item u-fade-up u-delay-200">
+                <div class="p-about-vision__head">
+                  <span class="p-about-vision__year">2年後</span>
+                  <h3 class="p-about-vision__term">
+                    実装の幅を広げ、技術を深める
+                  </h3>
+                </div>
+                <p class="p-about-vision__text">
+                  静的な表示だけでなく、JavaScriptを用いた複雑な機能実装や、WordPressの高度なカスタマイズスキルを習得します。「動く・機能する」サイトを作れる技術者として、対応領域を広げます。
+                </p>
+              </li>
+
+              <!-- 将来像3つ目 -->
+              <li class="p-about-vision__item u-fade-up u-delay-400">
+                <div class="p-about-vision__head">
+                  <span class="p-about-vision__year">3年後</span>
+                  <h3 class="p-about-vision__term">
+                    フロントエンドエンジニアへ
+                  </h3>
+                </div>
+                <p class="p-about-vision__text">
+                  モダンなフレームワーク（React/Vue.jsなど）やパフォーマンス最適化を学び、フロントエンドエンジニアへとステップアップします。UI/UXの視点も持ち、ユーザー体験を技術で最大化できる人材を目指します。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- /Visionセクション -->
+
+      <!-- Contactセクション -->
+      <section id="contact" class="p-contact">
+        <div class="p-contact__inner l-inner">
+          <h2 class="p-contact__title c-section-title u-fade-up">
+            <span class="c-section-title__en">CONTACT</span>
+            <span class="c-section-title__ja">お問い合わせ</span>
+          </h2>
+
+          <p class="p-contact__text">
+            お問い合わせはメール、またはXのDM<br class="u-hidden-md" />
+            にてお願いいたします
+          </p>
+
+          <!-- メールアドレス -->
+          <div class="p-contact__email u-fade-up u-delay-200">
+            <a
+              target="_blank"
+              href="mailto:shizuka.yamamoto87@gmail.com"
+              class="c-email-link"
+            >
+              <span
+                >shizuka.yamamoto87<br class="u-hidden-md" />@gmail.com</span
+              >
+
+              <img
+                src="./assets/img/icon-arrow-up-right.svg"
+                alt=""
+                class="c-email-link__icon"
+                width="24"
+                height="24"
+              />
+            </a>
+          </div>
+
+          <!-- SNSリンク -->
+          <ul class="p-contact__social u-fade-up u-delay-400">
+            <li class="p-contact__social-item">
+              <a
+                href="https://github.com/shiz-87"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./assets/img/icon-github-white.svg"
+                  alt="GitHub"
+                  width="56"
+                  height="56"
+                />
+              </a>
+            </li>
+
+            <li class="p-contact__social-item">
+              <a
+                href="https://x.com/shiz__87"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./assets/img/icon-x-white.svg"
+                  alt="X"
+                  width="56"
+                  height="56"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- /Contactセクション -->
+    </main>
+
+    <!-- フッター -->
+    <footer id="footer" class="l-footer">
+      <div class="l-footer__inner l-inner">
+        <nav class="p-footer-nav" aria-label="フッターナビゲーション">
+          <ul class="p-footer-nav__list">
+            <li class="p-footer-nav__item">
+              <a class="p-footer-nav__link" href="#">HOME</a>
+            </li>
+            <li class="p-footer-nav__item">
+              <a class="p-footer-nav__link" href="#">ABOUT</a>
+            </li>
+            <li class="p-footer-nav__item">
+              <a class="p-footer-nav__link" href="#">SKILLS</a>
+            </li>
+            <li class="p-footer-nav__item">
+              <a class="p-footer-nav__link" href="#">WORKS</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="l-footer__copyright">
+          <small>&copy; 2026 Shizuka Yamamoto Portfolio.</small>
+        </div>
+      </div>
+    </footer>
+    <!-- /フッター -->
+
+    <script defer src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+  </body>
+</html>
