@@ -2,20 +2,15 @@
     <footer id="footer" class="l-footer">
         <div class="l-footer__inner l-inner">
             <nav class="p-footer-nav" aria-label="フッターナビゲーション">
-                <ul class="p-footer-nav__list">
-                    <li class="p-footer-nav__item">
-                        <a class="p-footer-nav__link" href="#">HOME</a>
-                    </li>
-                    <li class="p-footer-nav__item">
-                        <a class="p-footer-nav__link" href="#">ABOUT</a>
-                    </li>
-                    <li class="p-footer-nav__item">
-                        <a class="p-footer-nav__link" href="#">SKILLS</a>
-                    </li>
-                    <li class="p-footer-nav__item">
-                        <a class="p-footer-nav__link" href="#">WORKS</a>
-                    </li>
-                </ul>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'footer-nav',
+                        'container'      => false,
+                        'menu_class'     => 'p-footer-nav__list',
+                    )
+                );
+                ?>
             </nav>
 
             <div class="l-footer__copyright">

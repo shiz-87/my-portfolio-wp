@@ -49,10 +49,17 @@ add_action('after_setup_theme', 'my_menu_init');
 /**
  * メニューの<li>タグにクラスを付与
  */
-function add_class_to_menu_li($classes, $item, $args) {
+function add_class_to_menu_li($classes, $item, $args)
+{
+    // ヘッダーの場合
     if ($args->theme_location === 'header-nav') {
         $classes[] = 'p-header-nav__item';
     }
+    // フッターの場合
+    elseif ($args->theme_location === 'footer-nav') {
+        $classes[] = 'p-footer-nav__item';
+    }
+
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_class_to_menu_li', 10, 3);
@@ -60,16 +67,21 @@ add_filter('nav_menu_css_class', 'add_class_to_menu_li', 10, 3);
 /**
  * メニューの<a>タグにクラスを付与
  */
-function add_class_to_menu_a($atts, $item, $args) {
+function add_class_to_menu_a($atts, $item, $args)
+{
+    // ヘッダーの場合
     if ($args->theme_location === 'header-nav') {
-        // 管理画面で「is-button」というクラスをつけた場合だけ、ボタン用のクラスにする
         if (in_array('is-button', $item->classes)) {
             $atts['class'] = 'p-header-nav__button c-button';
         } else {
-            // それ以外は通常のリンククラス
             $atts['class'] = 'p-header-nav__link';
         }
     }
+    // フッターの場合
+    elseif ($args->theme_location === 'footer-nav') {
+        $atts['class'] = 'p-footer-nav__link';
+    }
+
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_class_to_menu_a', 10, 3);
