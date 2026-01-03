@@ -105,3 +105,9 @@ function change_drawer_menu_html($item_output, $item, $depth, $args)
 }
 // リンクの中身をいじるためのフック
 add_filter('walker_nav_menu_start_el', 'change_drawer_menu_html', 10, 4);
+
+/* ==============================================
+   2560px以上の画像の自動縮小機能を無効化
+   （縦長のWebサイトキャプチャを綺麗に見せるため）
+============================================== */
+add_filter('big_image_size_threshold', '__return_false');
