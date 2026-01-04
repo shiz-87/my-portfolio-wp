@@ -71,28 +71,42 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
+    // スクロールイベントの負荷軽減用フラグ
+    let isTicking = false;
+
     // スクロール時の表示切り替え ＆ 色反転
     window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
+      if (!isTicking) {
+        // 描画のタイミングに合わせて処理を実行
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          const windowHeight = window.innerHeight;
 
-      // --- 表示・非表示（300pxスクロールしたら表示） ---
-      if (scrollY > 300) {
-        pageTopBtn.classList.add("is-active");
-      } else {
-        pageTopBtn.classList.remove("is-active");
-      }
+          // --- 表示・非表示（300pxスクロールしたら表示） ---
+          if (scrollY > 300) {
+            pageTopBtn.classList.add("is-active");
+          } else {
+            pageTopBtn.classList.remove("is-active");
+          }
 
-      // --- 色反転（赤いエリアに入ったらクラス付与） ---
-      if (targetSection) {
-        const targetRect = targetSection.getBoundingClientRect();
-        const triggerPoint = windowHeight - 100; // 画面下から100pxの位置を判定ラインに
+          // --- 色反転（赤いエリアに入ったらクラス付与） ---
+          if (targetSection) {
+            const targetRect = targetSection.getBoundingClientRect();
+            const triggerPoint = windowHeight - 100; // 画面下から100pxの位置を判定ラインに
 
-        if (targetRect.top < triggerPoint) {
-          pageTopBtn.classList.add("is-reverse");
-        } else {
-          pageTopBtn.classList.remove("is-reverse");
-        }
+            if (targetRect.top < triggerPoint) {
+              pageTopBtn.classList.add("is-reverse");
+            } else {
+              pageTopBtn.classList.remove("is-reverse");
+            }
+          }
+
+          // 処理完了フラグを下ろす
+          isTicking = false;
+        });
+
+        // 処理中フラグを立てる
+        isTicking = true;
       }
     });
   }
