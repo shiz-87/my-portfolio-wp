@@ -9,22 +9,8 @@
                         <h1 class="p-work-detail__title u-fade-up">作品詳細</h1>
 
                         <!-- パンくずリスト -->
-                        <nav
-                            class="c-breadcrumb u-fade-up u-delay-200"
-                            aria-label="パンくずリスト">
-                            <ul class="c-breadcrumb__list">
-                                <li class="c-breadcrumb__item">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>" class="c-breadcrumb__link">HOME</a>
-                                </li>
-                                <li class="c-breadcrumb__item">
-                                    <a href="<?php echo esc_url(home_url('/#works')); ?>" class="c-breadcrumb__link">作品一覧</a>
-                                </li>
-                                <li class="c-breadcrumb__item" aria-current="page">
-                                    <?php the_title(); ?>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- /パンくずリスト -->
+                        <?php get_template_part('template-parts/breadcrumb'); ?>
+
                     </div>
                 </header>
 

@@ -7,18 +7,8 @@
                 <h1 class="p-works-archive__title u-fade-up">作品一覧</h1>
 
                 <!-- パンくずリスト -->
-                <nav
-                    class="c-breadcrumb u-fade-up u-delay-200"
-                    aria-label="パンくずリスト">
-                    <ul class="c-breadcrumb__list">
-                        <?php
-                        if (function_exists('bcn_display')) {
-                            bcn_display();
-                        }
-                        ?>
-                    </ul>
-                </nav>
-                <!-- /パンくずリスト -->
+                <?php get_template_part('template-parts/breadcrumb'); ?>
+
             </div>
         </div>
 
