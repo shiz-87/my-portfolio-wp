@@ -291,7 +291,7 @@ body {
   font-weight: 700;
   letter-spacing: 1.92px;
   line-height: 1;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .c-skill-card__subtitle {
@@ -302,15 +302,16 @@ body {
   font-weight: 500;
   letter-spacing: 0.48px;
   line-height: 1.5;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .c-skill-card__text {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.56px;
-  line-height: 2;
-  margin-top: 24px;
+  line-height: 1.8;
+  margin-top: 32px;
+  text-align: justify;
 }
 
 .c-work-card {
@@ -1494,13 +1495,13 @@ body {
   .c-skill-card__subtitle {
     font-size: 16px;
     letter-spacing: 0.64px;
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .c-skill-card__text {
     font-size: 16px;
     letter-spacing: 0.64px;
-    margin-top: 32px;
+    margin-top: 40px;
   }
 
   .c-work-card {
