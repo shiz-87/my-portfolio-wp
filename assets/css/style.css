@@ -465,7 +465,7 @@ body {
 
 /* アニメーションする線（疑似要素） */
 .c-breadcrumb__link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px; /* 線の位置調整 */
