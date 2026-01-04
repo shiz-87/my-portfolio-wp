@@ -82,13 +82,9 @@ textarea {
   vertical-align: top;
 }
 
-/**
- * メディアクエリの定義
- */
-
-/**
- * ホバーアニメーション（下線が中央から伸びる）
- */
+html {
+  scroll-padding-top: 80px;
+}
 
 body {
   background-color: #ffffff;
@@ -1876,11 +1872,9 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-
   .c-breadcrumb__item {
     font-size: 14px;
   }
-
 
   .p-top-mv__title {
     font-size: 40px;
