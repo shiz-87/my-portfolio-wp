@@ -12,7 +12,7 @@
         </p>
 
         <!-- メールアドレス -->
-        <div class="p-contact__email u-fade-up u-delay-200">
+        <div class="p-contact__email u-fade-up">
             <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -30,7 +30,7 @@
         </div>
 
         <!-- SNSリンク -->
-        <ul class="p-contact__social u-fade-up u-delay-400">
+        <ul class="p-contact__social u-fade-up">
             <li class="p-contact__social-item">
                 <a
                     href="https://github.com/shiz-87"
