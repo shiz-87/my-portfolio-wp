@@ -35,7 +35,7 @@
     <header class="l-header">
         <div class="l-header__inner l-inner">
             <h1 class="l-header__logo">
-                <a href="#">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
                     SHIZUKA<br class="u-hidden-md" />
                     YAMAMOTO</a>
             </h1>

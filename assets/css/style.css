@@ -615,6 +615,7 @@ body {
   font-weight: 700;
   letter-spacing: 1.28px;
   line-height: 1;
+  font-size: 20px;
 }
 
 .p-drawer-nav {
@@ -1463,7 +1464,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .l-header__logo a {
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 2.88px;
     line-height: 1;
   }
@@ -1483,8 +1484,13 @@ body {
 
   .l-inner {
     margin-inline: auto;
-    max-width: 1080px;
+    max-width: 1280px;
     padding-inline: 40px;
+  }
+
+  .l-header .l-inner {
+    max-width: 100%;
+    padding-inline: 64px;
   }
 
   .c-section-title__en {
@@ -1870,17 +1876,11 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  .c-hamburger {
-    display: none;
-  }
 
   .c-breadcrumb__item {
     font-size: 14px;
   }
 
-  .p-header-nav {
-    display: block;
-  }
 
   .p-top-mv__title {
     font-size: 40px;
@@ -1900,6 +1900,7 @@ body {
   }
 
   .p-about-profile__image {
+    margin-inline: 0;
     flex-shrink: 0;
     max-width: none;
     width: 37.037037037%;
@@ -2064,5 +2065,19 @@ body {
 
   .p-work-overview__button {
     margin-top: 64px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .c-hamburger {
+    display: none;
+  }
+
+  .p-header-nav {
+    display: block;
+  }
+
+  .p-header-nav__link {
+    font-size: 20px;
   }
 }
