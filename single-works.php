@@ -2,17 +2,11 @@
 
 <main class="l-main">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php get_template_part('template-parts/page-header', null, [
+                'title' => '作品詳細'
+            ]); ?>
 
             <article class="p-work-detail">
-                <header class="p-work-detail__header">
-                    <div class="l-inner">
-                        <h1 class="p-work-detail__title u-fade-up">作品詳細</h1>
-
-                        <!-- パンくずリスト -->
-                        <?php get_template_part('template-parts/breadcrumb'); ?>
-
-                    </div>
-                </header>
 
                 <!-- MVセクション -->
                 <section class="p-work-mv">

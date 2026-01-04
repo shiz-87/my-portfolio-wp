@@ -488,6 +488,26 @@ body {
 }
 
 /* ============================================
+   Common Page Header (共通ページヘッダー)
+   ※作品一覧、詳細、Aboutなどのタイトルエリア
+============================================ */
+.c-page-header {
+  margin-top: 70px;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.c-page-header__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.92px;
+  line-height: 1;
+  padding-block: 64px;
+  text-align: center;
+}
+
+/* ============================================
    Page Top Button (トップへ戻るボタン)
 ============================================ */
 
@@ -884,7 +904,7 @@ body {
 }
 
 .p-about-profile {
-  padding-block: 134px 64px;
+  padding-block: 64px;
 }
 
 .p-about-profile__inner {
@@ -1051,16 +1071,7 @@ body {
 }
 
 .p-works-archive {
-  padding-block: 70px 100px;
-}
-
-.p-works-archive__title {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 1.92px;
-  line-height: 1;
-  padding-block: 64px;
-  text-align: center;
+  padding-bottom: 100px;
 }
 
 .p-works-archive__body {
@@ -1071,19 +1082,6 @@ body {
   display: grid;
   gap: 56px; /* スマホ：1列 */
   grid-template-columns: 1fr; /* タブレット以上：2列 */
-}
-
-.p-work-detail {
-  padding-top: 70px;
-}
-
-.p-work-detail__title {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 1.92px;
-  line-height: 1;
-  padding-block: 64px;
-  text-align: center;
 }
 
 .p-work-mv {
@@ -1583,6 +1581,12 @@ body {
     width: 60px;
   }
 
+  .c-page-header__title {
+    font-size: 40px;
+    letter-spacing: 3.2px;
+    padding-block: 100px;
+  }
+
   .p-top-mv__inner {
     align-items: center;
     display: flex;
@@ -1715,7 +1719,7 @@ body {
   }
 
   .p-about-profile {
-    padding-block: 170px 100px;
+    padding-block: 80px 100px;
   }
 
   .p-about-vision {
@@ -1732,12 +1736,6 @@ body {
     padding-bottom: 200px;
   }
 
-  .p-works-archive__title {
-    font-size: 40px;
-    letter-spacing: 3.2px;
-    padding-block: 100px;
-  }
-
   .p-works-archive__body {
     margin-top: 80px;
   }
@@ -1748,7 +1746,7 @@ body {
   }
 
   .p-work-mv {
-    padding-bottom: 100px;
+    padding-block: 80px 100px;
   }
 
   .p-work-overview {
@@ -2003,12 +2001,6 @@ body {
     font-size: 16px;
     letter-spacing: 0.64px;
     width: 46.2962962963%;
-  }
-
-  .p-work-detail__title {
-    font-size: 40px;
-    letter-spacing: 3.2px;
-    padding-block: 100px;
   }
 
   .p-work-mv__image {

@@ -2,9 +2,13 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <main class="l-main">
+
+            <?php get_template_part('template-parts/page-header', null, ['title' => 'ABOUT']); ?>
+
             <!-- プロフィールセクション -->
             <section class="p-about-profile">
                 <div class="p-about-profile__inner l-inner">
+
                     <div class="p-about-profile__image u-fade-up">
                         <img
                             src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.png"

@@ -1,17 +1,11 @@
 <?php get_header(); ?>
 
 <main class="l-main">
+    <?php get_template_part('template-parts/page-header', null, [
+        'title' => '作品一覧'
+    ]); ?>
+
     <div class="p-works-archive">
-        <div class="p-works-archive__header">
-            <div class="l-inner">
-                <h1 class="p-works-archive__title u-fade-up">作品一覧</h1>
-
-                <!-- パンくずリスト -->
-                <?php get_template_part('template-parts/breadcrumb'); ?>
-
-            </div>
-        </div>
-
         <div class="p-works-archive__body">
             <div class="l-inner">
 
