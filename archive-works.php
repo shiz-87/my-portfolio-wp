@@ -11,10 +11,11 @@
                     class="c-breadcrumb u-fade-up u-delay-200"
                     aria-label="パンくずリスト">
                     <ul class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item">
-                            <a href="#" class="c-breadcrumb__link">HOME</a>
-                        </li>
-                        <li class="c-breadcrumb__item" aria-current="page">作品一覧</li>
+                        <?php
+                        if (function_exists('bcn_display')) {
+                            bcn_display();
+                        }
+                        ?>
                     </ul>
                 </nav>
                 <!-- /パンくずリスト -->
