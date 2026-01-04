@@ -32,7 +32,7 @@
                                 <img src="<?php echo esc_url($mv_pc['url']); ?>" alt="<?php echo esc_attr($mv_pc['alt']); ?>" width="<?php echo esc_attr($mv_pc['width']); ?>" height="<?php echo esc_attr($mv_pc['height']); ?>">
 
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.jpg" alt="No Image" />
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.png" alt="No Image" />
                             <?php endif; ?>
                         </figure>
 
@@ -265,7 +265,7 @@
                                             <?php if (has_post_thumbnail()) : ?>
                                                 <?php the_post_thumbnail('large'); ?>
                                             <?php else : ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.jpg" alt="No Image" />
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.png" alt="No Image" />
                                             <?php endif; ?>
                                         </figure>
                                     </a>

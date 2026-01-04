@@ -183,7 +183,7 @@
                                                 <?php if (has_post_thumbnail()) : ?>
                                                     <?php the_post_thumbnail(); ?>
                                                 <?php else : ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.jpg" alt="No Image" />
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.png" alt="No Image" />
                                                 <?php endif; ?>
                                             </figure>
 
