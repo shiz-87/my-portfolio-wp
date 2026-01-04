@@ -34,11 +34,13 @@
     <!-- ヘッダー -->
     <header class="l-header">
         <div class="l-header__inner l-inner">
-            <h1 class="l-header__logo">
+            <?php $header_tag = is_front_page() ? 'h1' : 'div'; ?>
+
+            <<?php echo $header_tag; ?> class="l-header__logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     SHIZUKA<br class="u-hidden-md" />
                     YAMAMOTO</a>
-            </h1>
+            </<?php echo $header_tag; ?>>
 
             <!-- グローバルナビゲーション -->
             <nav class="p-header-nav" aria-label="グローバルナビゲーション">

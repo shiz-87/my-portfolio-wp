@@ -3,7 +3,8 @@
 <main class="l-main">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php get_template_part('template-parts/page-header', null, [
-                'title' => '作品詳細'
+                'title' => '作品詳細',
+                'tag'   => 'div'
             ]); ?>
 
             <article class="p-work-detail">
@@ -53,7 +54,7 @@
                                 }
                                 ?>
                             </div>
-                            <h2 class="p-work-mv__title"><?php the_title(); ?></h2>
+                            <h1 class="p-work-mv__title"><?php the_title(); ?></h1>
                             <div class="p-work-mv__text">
                                 <?php
                                 $mv_desc = get_field('work_mv_desc');

@@ -1,16 +1,11 @@
 <?php
-/**
- * ページヘッダーの共通パーツ
- * $args['title'] : ページタイトル（必須）
- */
+// 引数（$args）から値を取り出す。指定がない場合は初期値を設定。
+$title = $args['title'] ?? ''; // タイトル文字
+$tag   = $args['tag']   ?? 'h1'; // タグ（指定がなければh1）
 ?>
 
-<header class="c-page-header">
-    <div class="l-inner">
-        <h1 class="c-page-header__title u-fade-up">
-            <?php echo esc_html($args['title']); ?>
-        </h1>
-
-        <?php get_template_part('template-parts/breadcrumb'); ?>
-    </div>
-</header>
+<div class="c-page-header">
+    <<?php echo esc_html($tag); ?> class="c-page-header__title">
+        <?php echo esc_html($title); ?>
+    </<?php echo esc_html($tag); ?>>
+</div>
