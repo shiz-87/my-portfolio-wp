@@ -295,17 +295,18 @@ body {
 }
 
 .c-skill-card__subtitle {
+  display: block;
   color: #666666;
   font-family: "Outfit", sans-serif;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.48px;
-  line-height: 1;
-  margin-top: 8px;
+  line-height: 1.5;
+  margin-top: 10px;
 }
 
 .c-skill-card__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.56px;
   line-height: 2;
@@ -683,11 +684,11 @@ body {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.96px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .p-top-mv__text {
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.64px;
@@ -751,7 +752,7 @@ body {
 }
 
 .p-top-about__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.56px;
   line-height: 2;
@@ -832,7 +833,7 @@ body {
 }
 
 .p-contact__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.56px;
   line-height: 2;
@@ -872,7 +873,7 @@ body {
 }
 
 .p-footer-nav__link {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 1.12px;
   line-height: 1;
@@ -946,7 +947,7 @@ body {
 }
 
 .p-about-profile__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.56px;
   line-height: 2;
@@ -998,7 +999,7 @@ body {
 }
 
 .p-about-strength__term {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.56px;
   line-height: 1.5;
@@ -1006,7 +1007,7 @@ body {
 
 .p-about-strength__text {
   color: #666666;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.56px;
   line-height: 2;
 }
@@ -1053,7 +1054,7 @@ body {
 }
 
 .p-about-vision__term {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.56px;
   line-height: 1.5;
@@ -1061,7 +1062,7 @@ body {
 }
 
 .p-about-vision__text {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.56px;
   line-height: 2;
   margin-top: 8px;
@@ -1109,7 +1110,7 @@ body {
 }
 
 .p-work-mv__text {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.56px;
   line-height: 2;
   margin-top: 16px;
@@ -1146,16 +1147,8 @@ body {
   padding-block: 32px;
 }
 
-.p-work-overview__item {
-  /* 最初のアイテム: 上の余白を消す */
-}
-
 .p-work-overview__item:first-child {
   padding-top: 0;
-}
-
-.p-work-overview__item {
-  /* 最後のアイテム: 線と下の余白を消す */
 }
 
 .p-work-overview__item:last-child {
@@ -1164,7 +1157,7 @@ body {
 }
 
 .p-work-overview__term {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.56px;
   line-height: 1;
@@ -1172,7 +1165,7 @@ body {
 
 .p-work-overview__desc {
   color: #666666;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.56px;
   line-height: 1.7;
 }
@@ -1199,16 +1192,8 @@ body {
   padding-block: 32px;
 }
 
-.p-work-point__item {
-  /* 最初のアイテム: 上の余白を消す */
-}
-
 .p-work-point__item:first-child {
   padding-top: 0;
-}
-
-.p-work-point__item {
-  /* 最後のアイテム: 線と下の余白を消す */
 }
 
 .p-work-point__item:last-child {
@@ -1226,14 +1211,14 @@ body {
 }
 
 .p-work-point__title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.56px;
   line-height: 1.6;
 }
 
 .p-work-point__text {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.56px;
   line-height: 2;
   margin-top: 16px;
@@ -1282,16 +1267,8 @@ body {
   width: 8px; /* 全体の幅 */
 }
 
-.p-work-capture__scroll {
-  /* 背景（トラック） */
-}
-
 .p-work-capture__scroll::-webkit-scrollbar-track {
   background: #ffffff;
-}
-
-.p-work-capture__scroll {
-  /* 持ち手（サム） */
 }
 
 .p-work-capture__scroll::-webkit-scrollbar-thumb {
@@ -1299,10 +1276,6 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   border: 2px solid transparent;
   border-radius: 10px;
-}
-
-.p-work-capture__scroll {
-  /* ホバー時は少し濃くして操作しやすく */
 }
 
 .p-work-capture__scroll::-webkit-scrollbar-thumb:hover {
@@ -1387,7 +1360,7 @@ body {
 
 .p-not-found__text {
   color: #666666;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.56px;
   line-height: 1.7;
   margin-top: 24px;
@@ -1521,7 +1494,7 @@ body {
   .c-skill-card__subtitle {
     font-size: 16px;
     letter-spacing: 0.64px;
-    margin-top: 10px;
+    margin-top: 14px;
   }
 
   .c-skill-card__text {
@@ -1536,8 +1509,8 @@ body {
   }
 
   .c-work-card__body {
-    min-height: 205px;
-    padding: 40px 32px 24px;
+    min-height: 170px;
+    padding: 32px 32px 24px;
   }
 
   .c-work-card__tags {
@@ -1545,8 +1518,8 @@ body {
   }
 
   .c-work-card__title {
-    font-size: 24px;
-    letter-spacing: 2.56px;
+    font-size: 18px;
+    letter-spacing: 2px;
   }
 
   .c-work-card__meta {
@@ -1724,14 +1697,75 @@ body {
     padding-block: 80px 100px;
   }
 
+  .p-about-profile__text {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+    margin-top: 32px;
+  }
+
+  .p-about-profile__text p:nth-child(n + 2) {
+    margin-top: 16px;
+  }
+
+  .p-about-strength {
+    padding-block: 100px;
+  }
+
+  .p-about-strength__card {
+    margin-top: 80px;
+    padding: 64px;
+  }
+
+  .p-about-strength__item {
+    padding-block: 48px;
+  }
+
+  .p-about-strength__head img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .p-about-strength__term {
+    font-size: 20px;
+    letter-spacing: 0.96px;
+    line-height: 1;
+  }
+
+  .p-about-strength__text {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+  }
+
   .p-about-vision {
     padding-block: 100px 200px;
   }
 
+  .p-about-vision__content {
+    margin-top: 80px;
+    padding: 48px 40px 48px 48px;
+  }
+
   .p-about-vision__item::before {
-    height: 24px;
-    left: -46px;
-    width: 24px;
+    height: 16px;
+    left: -42px;
+    width: 16px;
+  }
+
+  .p-about-vision__year {
+    font-size: 14px;
+    letter-spacing: 1.12px;
+  }
+
+  .p-about-vision__term {
+    font-size: 20px;
+    letter-spacing: 0.96px;
+    line-height: 1;
+    margin-top: 16px;
+  }
+
+  .p-about-vision__text {
+    font-size: 16px;
+    letter-spacing: 0.64px;
   }
 
   .p-works-archive {
@@ -1751,12 +1785,39 @@ body {
     padding-block: 80px 100px;
   }
 
+  .p-work-mv__title {
+    font-size: 24px;
+    letter-spacing: 1.28px;
+    line-height: 1.5;
+  }
+
+  .p-work-mv__text {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+  }
+
+  .p-work-mv__button {
+    margin-top: 64px;
+  }
+
   .p-work-overview {
     padding-block: 100px;
   }
 
   .p-work-overview__content {
     margin-top: 80px;
+    padding: 56px;
+  }
+
+  .p-work-overview__term {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+
+  .p-work-overview__desc {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+    line-height: 2;
   }
 
   .p-work-point {
@@ -1771,7 +1832,7 @@ body {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-block: 40px;
+    padding-block: 48px;
   }
 
   .p-work-point__item:nth-child(even) {
@@ -1876,6 +1937,10 @@ body {
     font-size: 14px;
   }
 
+  .c-work-card__title {
+    font-size: 22px;
+  }
+
   .p-top-mv__title {
     font-size: 40px;
     letter-spacing: 1.6px;
@@ -1914,30 +1979,15 @@ body {
     letter-spacing: 2.56px;
   }
 
-  .p-about-profile__text {
-    font-size: 16px;
-    letter-spacing: 0.64px;
-    margin-top: 32px;
-  }
-
-  .p-about-profile__text p:nth-child(n + 2) {
-    margin-top: 16px;
-  }
-
-  .p-about-strength {
-    padding-block: 100px;
-  }
-
   .p-about-strength__card {
-    margin-top: 80px;
-    padding: 64px;
+    padding: 80px;
   }
 
   .p-about-strength__item {
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-between;
-    padding-block: 40px;
+    padding-block: 64px;
   }
 
   .p-about-strength__head {
@@ -1945,20 +1995,8 @@ body {
     width: 365px;
   }
 
-  .p-about-strength__head img {
-    height: 24px;
-    width: 24px;
-  }
-
   .p-about-strength__term {
-    font-size: 24px;
-    letter-spacing: 0.96px;
-    line-height: 1;
-  }
-
-  .p-about-strength__text {
-    font-size: 16px;
-    letter-spacing: 0.64px;
+    font-size: 22px;
   }
 
   .p-about-vision__content {
@@ -1980,22 +2018,12 @@ body {
     width: 360px;
   }
 
-  .p-about-vision__year {
-    font-size: 14px;
-    letter-spacing: 1.12px;
-  }
-
   .p-about-vision__term {
-    font-size: 24px;
-    letter-spacing: 0.96px;
-    line-height: 1;
-    margin-top: 16px;
+    font-size: 22px;
   }
 
   .p-about-vision__text {
-    font-size: 16px;
-    letter-spacing: 0.64px;
-    width: 46.2962962963%;
+    width: 56.2962962963%;
   }
 
   .p-work-mv__image {
@@ -2018,24 +2046,13 @@ body {
     gap: 12px;
   }
 
-  .p-work-mv__title {
-    font-size: 24px;
-    letter-spacing: 1.28px;
-    line-height: 1.5;
-  }
-
-  .p-work-mv__text {
-    font-size: 16px;
-    letter-spacing: 0.64px;
-  }
-
   .p-work-mv__button {
     margin-top: 64px;
     text-align: left;
   }
 
   .p-work-overview__content {
-    padding: 64px;
+    padding: 80px;
   }
 
   .p-work-overview__item {
@@ -2048,17 +2065,22 @@ body {
     flex-shrink: 0;
     font-size: 20px;
     letter-spacing: 0.8px;
-    width: 120px;
+    width: 180px;
   }
 
   .p-work-overview__desc {
     font-size: 16px;
     letter-spacing: 0.64px;
     line-height: 2;
+    flex: 1;
   }
 
   .p-work-overview__button {
     margin-top: 64px;
+  }
+
+  .p-work-point__item {
+    padding-block: 64px;
   }
 }
 
