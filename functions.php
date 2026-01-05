@@ -29,10 +29,13 @@ function my_script_init()
     // CSSの読み込み
     wp_enqueue_style('swiper-css', get_template_directory_uri() . '/assets/css/lib/swiper-bundle.min.css', array(), '12.0.3', 'all');
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime(get_theme_file_path('/assets/css/style.css')), 'all');
+    wp_enqueue_style('prism-css', 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css', array(), '1.29.0', 'all');
 
     // JSの読み込み
     wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/js/lib/swiper-bundle.min.js', array(), '12.0.3', true);
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js', array("jquery"), filemtime(get_theme_file_path('/assets/js/script.js')), true);
+    wp_enqueue_script('prism-js', 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js', array(), '1.29.0', true);
+    wp_enqueue_script('prism-scss', 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-scss.min.js', array('prism-js'), '1.29.0', true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 

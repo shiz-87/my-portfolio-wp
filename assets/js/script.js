@@ -141,4 +141,35 @@ document.addEventListener("DOMContentLoaded", function () {
       fadeObserver.observe(el);
     });
   }
+
+/* ============================================
+    コード表示アコーディオンの制御（アニメーション付き）
+  ============================================ */
+  const codeTriggers = document.querySelectorAll(".js-code-trigger");
+
+  if (codeTriggers.length > 0) {
+    codeTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        // 1. ボタンの矢印を回転させる
+        trigger.classList.toggle("is-open");
+
+        // 2. 次の要素（コードエリア）を取得
+        const content = trigger.nextElementSibling;
+
+        if (content) {
+          // もし高さが設定されていたら（＝開いていたら）
+          if (content.style.height) {
+            // ▼ 閉じる処理
+            content.style.height = null; // 高さをリセット（CSSの0に戻る）
+            content.classList.remove("is-active"); // 余白や透明度のクラスを外す
+          } else {
+            // ▼ 開く処理
+            content.classList.add("is-active"); // 余白や透明度をつける
+            // 中身の高さ（scrollHeight）を計算して、pixel単位で指定する
+            content.style.height = content.scrollHeight + "px";
+          }
+        }
+      });
+    });
+  }
 });

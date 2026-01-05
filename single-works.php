@@ -173,6 +173,20 @@
                                 $p_img = get_field('point' . $i . '_image');
                                 $p_title = get_field('point' . $i . '_title');
                                 $p_text = get_field('point' . $i . '_text');
+                                $p_code  = get_field('point' . $i . '_code');
+                                $p_lang  = get_field('point' . $i . '_lang') ?: 'html';
+
+                                // 言語ごとの表示ラベル定義（画面の左上に出る文字）
+                                $lang_labels = [
+                                    'html'       => 'HTML',
+                                    'css'        => 'CSS',
+                                    'scss'       => 'SCSS',
+                                    'javascript' => 'JS',
+                                    'php'        => 'PHP'
+                                ];
+                                // ラベル決定（定義になければそのまま表示）
+                                $label_text = isset($lang_labels[$p_lang]) ? $lang_labels[$p_lang] : strtoupper($p_lang);
+
                                 // タイトルが入力されている場合のみ表示
                                 if ($p_title) :
                             ?>
@@ -190,6 +204,19 @@
                                             <p class="p-work-point__text">
                                                 <?php echo nl2br(esc_html($p_text)); ?>
                                             </p>
+
+                                            <?php if ($p_code) : ?>
+                                                <div class="c-code-accordion">
+                                                    <button type="button" class="c-code-trigger js-code-trigger">
+                                                        コードを見る
+                                                    </button>
+                                                    <div class="c-code-area">
+                                                        <div class="c-code-wrapper" data-label="<?php echo esc_attr($label_text); ?>">
+                                                            <pre><code class="language-<?php echo esc_attr($p_lang); ?>"><?php echo esc_html($p_code); ?></code></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                     </li>
                             <?php
