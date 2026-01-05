@@ -111,3 +111,15 @@ add_filter('walker_nav_menu_start_el', 'change_drawer_menu_html', 10, 4);
    （縦長のWebサイトキャプチャを綺麗に見せるため）
 ============================================== */
 add_filter('big_image_size_threshold', '__return_false');
+
+/* ==========================================================
+   Worksアーカイブの並び順を「更新日」順に変更
+========================================================== */
+function change_works_query_order( $query ) {
+    // 管理画面ではなく、メインクエリであり、Worksアーカイブページの場合のみ実行
+    if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'works' ) ) {
+        $query->set( 'orderby', 'modified' ); // 更新日時を基準にする
+        $query->set( 'order', 'DESC' );       // 新しい順（降順）
+    }
+}
+add_action( 'pre_get_posts', 'change_works_query_order' );
