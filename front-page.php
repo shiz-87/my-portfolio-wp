@@ -16,7 +16,7 @@
                     転職活動中です。
                 </p>
                 <div class="p-top-mv__button">
-                    <a class="c-button" href="#works">作品一覧を見る</a>
+                    <a class="c-button" href="<?php echo esc_url(get_post_type_archive_link('works')); ?>">作品一覧を見る</a>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@
                         現在はWeb制作スクール「デイトラ」にて、ピクセルパーフェクトな実装と保守性の高い設計を追求。現場で通用する実務力を磨いています。
                     </p>
                     <div class="p-top-about__button">
-                        <a href="#" class="c-button"> 私について詳しく</a>
+                        <a href="<?php echo esc_url(home_url('/about/')); ?>" class="c-button"> 私について詳しく</a>
                     </div>
                 </div>
             </div>
@@ -227,7 +227,7 @@
             </div>
 
             <div class="p-top-works__button">
-                <a href="#" class="c-button">作品一覧を見る</a>
+                <a class="c-button" href="<?php echo esc_url(get_post_type_archive_link('works')); ?>">作品一覧を見る</a>
             </div>
         </div>
     </section>
