@@ -1120,47 +1120,44 @@ body {
 .p-about-vision {
   position: relative;
   overflow: hidden; /* はみ出た光を隠す */
+  padding-block: 64px 100px;
   /* キラキラのベース背景 */
-  background-color: #fffaf0;
+  background-color: #ffffff;
   background-image: radial-gradient(
       at 0% 0%,
-      hsla(20, 100%, 90%, 1) 0,
+      hsla(15, 100%, 85%, 1) 0px,
       transparent 50%
     ),
-    radial-gradient(at 50% 0%, hsla(40, 100%, 85%, 1) 0, transparent 50%),
-    radial-gradient(at 100% 0%, hsla(180, 100%, 90%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(340, 100%, 90%, 1) 0, transparent 50%),
-    radial-gradient(at 100% 100%, hsla(60, 100%, 85%, 1) 0, transparent 50%);
-  background-size: 200% 200%;
-  animation: glitterAnimation 10s ease infinite;
-  padding-block: 64px 100px;
+    /* オレンジ（ブランド色） */
+      radial-gradient(at 50% 0%, hsla(45, 100%, 85%, 1) 0px, transparent 50%),
+    /* イエロー（イエベ春） */
+      radial-gradient(at 100% 0%, hsla(180, 80%, 90%, 1) 0px, transparent 50%),
+    /* ミント（先進性） */
+      radial-gradient(at 0% 100%, hsla(280, 80%, 90%, 1) 0px, transparent 50%),
+    /* ラベンダー（洗練） */
+      radial-gradient(at 100% 100%, hsla(200, 90%, 90%, 1) 0px, transparent 50%); /* スカイブルー（誠実） */
+
+  background-size: 150% 150%;
+  animation: vividAurora 12s ease infinite alternate;
 }
 
-/* 複数の光が混ざり合いながら動くアニメーション */
-@keyframes glitterAnimation {
+@keyframes vividAurora {
   0% {
     background-position: 0% 0%;
   }
-  25% {
-    background-position: 100% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
   100% {
-    background-position: 0% 0%;
+    background-position: 100% 100%;
   }
 }
 
 .p-about-vision__content {
-  background: rgba(255, 255, 255, 0.7); /* 少し透けさせて背景を感じさせる */
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
   margin-top: 40px;
   padding: 36px 20px 36px 23px;
+  border-radius: 20px;
 }
 
 .p-about-vision__list {
