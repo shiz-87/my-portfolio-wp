@@ -4,7 +4,7 @@ $title = $args['title'] ?? ''; // タイトル文字
 $tag   = $args['tag']   ?? 'h1'; // タグ（指定がなければh1）
 ?>
 
-<div class="c-page-header">
+<div class="c-page-header u-fade-up">
     <<?php echo esc_html($tag); ?> class="c-page-header__title">
         <?php echo esc_html($title); ?>
     </<?php echo esc_html($tag); ?>>

@@ -14,7 +14,7 @@
                     <div class="p-works-list">
                         <?php while (have_posts()) : the_post(); ?>
 
-                            <article class="c-work-card u-fade-up">
+                            <article class="c-work-card u-fade-up u-delay-200">
                                 <a href="<?php the_permalink(); ?>" class="c-work-card__link">
                                     <div class="c-work-card__image">
                                         <?php if (has_post_thumbnail()) : ?>

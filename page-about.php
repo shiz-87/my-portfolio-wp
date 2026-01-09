@@ -9,7 +9,7 @@
             <section class="p-about-profile">
                 <div class="p-about-profile__inner l-inner">
 
-                    <div class="p-about-profile__image u-fade-up">
+                    <div class="p-about-profile__image u-fade-up u-delay-200">
                         <img
                             src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.png"
                             alt="山本静華のプロフィール写真"
@@ -17,7 +17,7 @@
                             height="400" />
                     </div>
 
-                    <div class="p-about-profile__body u-fade-up u-delay-200">
+                    <div class="p-about-profile__body u-fade-up u-delay-400">
                         <p class="p-about-profile__en">SHIZUKA YAMAMOTO</p>
                         <h2 class="p-about-profile__ja">山本 静<span>華</span></h2>
                         <div class="p-about-profile__text">
