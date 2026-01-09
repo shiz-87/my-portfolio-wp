@@ -622,17 +622,17 @@ body {
 
 /* --- コードエリア（初期状態は非表示） --- */
 .c-code-area {
-  height: 0;          /* 最初は高さ0 */
-  opacity: 0;         /* 最初は透明 */
-  overflow: hidden;   /* はみ出た部分を隠す */
-  margin-top: 0;      /* 余白も最初は0 */
+  height: 0; /* 最初は高さ0 */
+  opacity: 0; /* 最初は透明 */
+  overflow: hidden; /* はみ出た部分を隠す */
+  margin-top: 0; /* 余白も最初は0 */
   transition: all 0.3s ease-out; /* 0.3秒かけて変化させる */
 }
 
 /* 開いた時にJSで付与するクラス */
 .c-code-area.is-active {
-  margin-top: 15px;   /* 開いた時だけ余白をつける */
-  opacity: 1;         /* 不透明にする */
+  margin-top: 15px; /* 開いた時だけ余白をつける */
+  opacity: 1; /* 不透明にする */
   /* heightはJSで計算してインラインスタイルで当てます */
 }
 
@@ -1118,12 +1118,47 @@ body {
 }
 
 .p-about-vision {
-  background: url(../img/bg-grid.png) repeat center top;
+  position: relative;
+  overflow: hidden; /* はみ出た光を隠す */
+  /* キラキラのベース背景 */
+  background-color: #fffaf0;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(20, 100%, 90%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsla(40, 100%, 85%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(180, 100%, 90%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(340, 100%, 90%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(60, 100%, 85%, 1) 0, transparent 50%);
+  background-size: 200% 200%;
+  animation: glitterAnimation 10s ease infinite;
   padding-block: 64px 100px;
 }
 
+/* 複数の光が混ざり合いながら動くアニメーション */
+@keyframes glitterAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 .p-about-vision__content {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7); /* 少し透けさせて背景を感じさせる */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   margin-top: 40px;
   padding: 36px 20px 36px 23px;
 }
