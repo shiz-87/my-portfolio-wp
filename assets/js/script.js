@@ -112,10 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ============================================
-    スクロールアニメーション（要素のフェードイン）
+    スクロール連動アニメーション（フェードイン・矢印など）
   ============================================ */
-  // 監視対象の要素を取得（.u-fade-upがついた要素すべて）
-  const fadeElements = document.querySelectorAll(".u-fade-up");
+  const fadeElements = document.querySelectorAll(".u-fade-up, .u-arrow-anim");
 
   // IntersectionObserverのオプション設定
   const fadeOptions = {
@@ -142,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-/* ============================================
+  /* ============================================
     コード表示アコーディオンの制御（アニメーション付き）
   ============================================ */
   const codeTriggers = document.querySelectorAll(".js-code-trigger");

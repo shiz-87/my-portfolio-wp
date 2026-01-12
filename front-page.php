@@ -4,28 +4,56 @@
     <!-- MVセクション -->
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-inner">
-            <div class="p-top-mv__content">
-                <h2 class="p-top-mv__title">
-                    デザインの<span class="u-text-accent">意図</span>を、<br />
-                    コードで<span class="u-text-accent">形</span>にする。
-                </h2>
-                <p class="p-top-mv__text">
-                    デザインカンプからの忠実な再現と、<br />
-                    世界観を大切にするレスポンシブ実装。<br />
-                    確かな技術を届けるコーダーとして、<br />
-                    転職活動中です。
-                </p>
-                <div class="p-top-mv__button">
-                    <a class="c-button" href="<?php echo esc_url(get_post_type_archive_link('works')); ?>">作品一覧を見る</a>
+
+            <!-- ボディビルダー -->
+            <div class="p-top-mv__bb-area">
+                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--black u-fade-up">
+                    ボディビルダーから
                 </div>
+
+                <div class="p-top-mv__bb-images u-fade-up u-delay-200">
+                    <figure class="p-top-mv__bb-img-back ">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-bodybuilder-back.webp" alt="ボディビル大会の様子(バックポーズ)" width="360" height="580">
+                    </figure>
+                    <figure class="p-top-mv__bb-img-front  ">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-bodybuilder-front.webp" alt="ボディビル大会の様子(フロントポーズ)" width="500" height="780">
+                    </figure>
+                </div>
+
+            </div>
+            <!-- 矢印 -->
+            <div class="p-top-mv__arrow u-arrow-anim u-delay-400">
+                <img
+                    class="u-hidden-md"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-arrow-sp.svg"
+                    alt=""
+                    width="35"
+                    height="58">
+
+                <img
+                    class="u-hidden-sm"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-arrow-pc.svg"
+                    alt=""
+                    width="100"
+                    height="24">
             </div>
 
-            <div class="p-top-mv__image">
-                <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/img/mv.svg"
-                    alt="コーダーのイメージイラスト"
-                    width="600"
-                    height="353" />
+            <!-- Webコーダー -->
+            <div class="p-top-mv__web-area">
+                <figure class="p-top-mv__web-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-web-coder.webp" alt="山本静華のポートレート" width="1280" height="1200">
+                </figure>
+
+                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--white">
+                    ＷＥＢコーダーへ
+                </div>
+
+                <div class="p-top-mv__copy">
+                    <h2 class="p-top-mv__name">
+                        SHIZUKA<br>YAMAMOTO
+                    </h2>
+                    <p class="p-top-mv__portfolio">Portfolio.</p>
+                </div>
             </div>
         </div>
     </section>

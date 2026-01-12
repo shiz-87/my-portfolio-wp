@@ -4,28 +4,44 @@
     <!-- MVセクション -->
     <section class="p-top-mv">
         <div class="p-top-mv__inner l-inner">
-            <div class="p-top-mv__content">
-                <h2 class="p-top-mv__title">
-                    デザインの<span class="u-text-accent">意図</span>を、<br />
-                    コードで<span class="u-text-accent">形</span>にする。
-                </h2>
-                <p class="p-top-mv__text">
-                    デザインカンプからの忠実な再現と、<br />
-                    世界観を大切にするレスポンシブ実装。<br />
-                    確かな技術を届けるコーダーとして、<br />
-                    転職活動中です。
-                </p>
-                <div class="p-top-mv__button">
-                    <a class="c-button" href="#works">作品一覧を見る</a>
+
+            <!-- ボディビルダー -->
+            <div class="p-top-mv__bb-area">
+                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--black">
+                    ボディビルダーから
                 </div>
+
+                <div class="p-top-mv__bb-images">
+                    <figure class="p-top-mv__bb-img-back">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-bodybuilder-back.webp" alt="ボディビル大会の様子(バックポーズ)" width="360" height="580">
+                    </figure>
+                    <figure class="p-top-mv__bb-img-front">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-bodybuilder-front.webp" alt="ボディビル大会の様子(フロントポーズ)" width="500" height="780">
+                    </figure>
+                </div>
+
+            </div>
+            <!-- 矢印 -->
+            <div class="p-top-mv__arrow">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow-down-orange.svg" alt="" width="" height="">
             </div>
 
-            <div class="p-top-mv__image">
-                <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/img/mv.svg"
-                    alt="コーダーのイメージイラスト"
-                    width="600"
-                    height="353" />
+            <!-- Webコーダー -->
+            <div class="p-top-mv__web-area">
+                <figure class="p-top-mv__web-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-web-coder.webp" alt="山本静華のポートレート" width="1280" height="1200">
+                </figure>
+
+                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--white">
+                    WEBコーダーへ
+                </div>
+
+                <div class="p-top-mv__copy">
+                    <h1 class="p-top-mv__name">
+                        SHIZUKA<br>YAMAMOTO
+                    </h1>
+                    <p class="p-top-mv__portfolio">Portfolio.</p>
+                </div>
             </div>
         </div>
     </section>

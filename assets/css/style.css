@@ -778,42 +778,121 @@ body {
 }
 
 .p-top-mv {
-  padding-block: 134px 64px;
+  padding-block: 126px 64px;
+  overflow: hidden;
 }
 
-.p-top-mv__content {
-  text-align: center;
+.p-top-mv__inner {
+  display: flex;
+  flex-direction: column;
 }
 
-.p-top-mv__title {
-  font-size: 24px;
+.p-top-mv__bb-area {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20px;
+  position: relative;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* --- 共通：縦書きラベル --- */
+.p-top-mv__vertical-label {
+  writing-mode: vertical-rl;
   font-weight: 700;
-  letter-spacing: 0.96px;
-  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  padding: 16px 8px;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.p-top-mv__text {
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0.64px;
-  line-height: 1.7;
-  margin-top: 24px;
+.p-top-mv__vertical-label--black {
+  background-color: #333;
+  color: #fff;
+  flex-shrink: 0;
+  margin-right: 24px;
 }
 
-.p-top-mv__button {
-  margin-top: 40px;
+.p-top-mv__bb-images {
+  position: relative;
+  flex-grow: 1;
+}
+
+.p-top-mv__bb-img-front {
+  width: 55%;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.p-top-mv__bb-img-back {
+  width: 40%;
+  position: absolute;
+  top: -16px;
+  right: 16px;
+  z-index: 1;
+  transform: rotate(10deg);
+  opacity: 0.9;
+}
+
+.p-top-mv__arrow {
   text-align: center;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 3; /* 写真より手前に表示 */
 }
 
-.p-top-mv__image {
-  margin-top: 48px;
-  text-align: center;
-}
-
-.p-top-mv__image img {
-  max-width: 400px;
+.p-top-mv__web-area {
+  position: relative;
   width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+  margin-top: 10px;
+}
+
+.p-top-mv__web-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.p-top-mv__vertical-label--white {
+  background-color: #fff;
+  color: #333;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.p-top-mv__copy {
+  font-family: "Outfit", sans-serif;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+  text-align: left;
+}
+
+.p-top-mv__name {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 3.2px;
+}
+
+.p-top-mv__portfolio {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 8px;
+  letter-spacing: 2.4px;
 }
 
 .p-top-about {
@@ -1559,6 +1638,26 @@ body {
 }
 
 .u-fade-up.u-delay-400 {
+  transition-delay: 0.4s;
+}
+
+.u-arrow-anim img {
+  transition: clip-path 3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.u-arrow-anim img.u-hidden-md {
+  clip-path: inset(0 0 100% 0); /* 上から下へ */
+}
+
+.u-arrow-anim img.u-hidden-sm {
+  clip-path: inset(0 100% 0 0); /* 左から右へ */
+}
+
+.u-arrow-anim.is-show img {
+  clip-path: inset(0 0 0 0);
+}
+
+.u-arrow-anim.u-delay-400 img {
   transition-delay: 0.4s;
 }
 
