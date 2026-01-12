@@ -11,7 +11,7 @@
 
                     <div class="p-about-profile__image u-fade-up u-delay-200">
                         <img
-                            src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.png"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.webp"
                             alt="山本静華のプロフィール写真"
                             width="400"
                             height="400" />
