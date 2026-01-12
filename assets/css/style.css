@@ -856,10 +856,6 @@ body {
   display: none;
 }
 
-.u-arrow-anim img.p-top-mv__arrow-sp {
-  clip-path: inset(0 0 100% 0);
-}
-
 .p-top-mv__web-area {
   position: relative;
   width: 100%;
@@ -1672,11 +1668,11 @@ body {
   transition: clip-path 3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.u-arrow-anim img.u-hidden-md {
+.u-arrow-anim img.p-top-mv__arrow-sp {
   clip-path: inset(0 0 100% 0); /* 上から下へ */
 }
 
-.u-arrow-anim img.u-hidden-sm {
+.u-arrow-anim img.p-top-mv__arrow-pc {
   clip-path: inset(0 100% 0 0); /* 左から右へ */
 }
 
