@@ -40,17 +40,17 @@
 
             <!-- Webコーダー -->
             <div class="p-top-mv__web-area">
-                <figure class="p-top-mv__web-img">
+                <figure class="p-top-mv__web-img u-fade-up u-delay-600">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-web-coder.webp" alt="山本静華のポートレート" width="1280" height="1200">
                 </figure>
 
-                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--white">
+                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--white u-fade-up u-delay-600">
                     ＷＥＢコーダーへ
                 </div>
             </div>
 
             <!-- コピー -->
-            <div class="p-top-mv__copy">
+            <div class="p-top-mv__copy u-fade-up u-delay-800">
                 <h2 class="p-top-mv__name">
                     SHIZUKA<br class="u-hidden-lg">
                     YAMAMOTO

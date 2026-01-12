@@ -1656,6 +1656,18 @@ body {
   transition-delay: 0.4s;
 }
 
+.u-fade-up.u-delay-600 {
+  transition-delay: 0.6s;
+}
+
+.u-fade-up.u-delay-800 {
+  transition-delay: 0.8s;
+}
+
+.u-fade-up.u-delay-1000 {
+  transition-delay: 1s;
+}
+
 .u-arrow-anim img {
   transition: clip-path 3s cubic-bezier(0.22, 1, 0.36, 1);
 }
