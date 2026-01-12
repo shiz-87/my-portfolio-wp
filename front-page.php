@@ -24,14 +24,14 @@
             <!-- 矢印 -->
             <div class="p-top-mv__arrow u-arrow-anim u-delay-400">
                 <img
-                    class="u-hidden-md"
+                    class="p-top-mv__arrow-sp"
                     src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-arrow-sp.svg"
                     alt=""
                     width="35"
                     height="58">
 
                 <img
-                    class="u-hidden-sm"
+                    class="p-top-mv__arrow-pc"
                     src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-arrow-pc.svg"
                     alt=""
                     width="100"
@@ -47,13 +47,15 @@
                 <div class="p-top-mv__vertical-label p-top-mv__vertical-label--white">
                     ＷＥＢコーダーへ
                 </div>
+            </div>
 
-                <div class="p-top-mv__copy">
-                    <h2 class="p-top-mv__name">
-                        SHIZUKA<br>YAMAMOTO
-                    </h2>
-                    <p class="p-top-mv__portfolio">Portfolio.</p>
-                </div>
+            <!-- コピー -->
+            <div class="p-top-mv__copy">
+                <h2 class="p-top-mv__name">
+                    SHIZUKA<br class="u-hidden-lg">
+                    YAMAMOTO
+                </h2>
+                <p class="p-top-mv__portfolio">Portfolio.</p>
             </div>
         </div>
     </section>
