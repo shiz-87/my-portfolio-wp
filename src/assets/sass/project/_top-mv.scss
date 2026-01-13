@@ -1,0 +1,84 @@
+@use "../global" as g;
+
+.p-top-mv {
+  padding-block: 134px 64px;
+}
+
+.p-top-mv__inner {
+  @include g.mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.p-top-mv__content {
+  text-align: center;
+
+  @include g.mq(md) {
+    text-align: left;
+    width: calc(540 / 1080 * 100%);
+  }
+}
+
+.p-top-mv__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.96px;
+
+  @include g.mq(md) {
+    font-size: 34px;
+  }
+
+  @include g.mq(lg) {
+    font-size: 40px;
+    letter-spacing: 1.6px;
+  }
+}
+
+.p-top-mv__text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.64px;
+  margin-top: 24px;
+
+  @include g.mq(sm) {
+    font-size: 16px;
+  }
+
+  @include g.mq(lg) {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.72px;
+  }
+}
+
+.p-top-mv__button {
+  text-align: center;
+  margin-top: 40px;
+
+  @include g.mq(md) {
+    text-align: left;
+  }
+}
+
+.p-top-mv__image {
+  text-align: center;
+  margin-top: 48px;
+
+  @include g.mq(md) {
+    padding-top: 40px;
+    width: calc(540 / 1080 * 100%);
+  }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    @include g.mq(md) {
+      max-width: 600px;
+    }
+  }
+}

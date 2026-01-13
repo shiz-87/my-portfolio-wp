@@ -24,7 +24,7 @@
                                         srcset="<?php echo esc_url($mv_pc['url']); ?>" />
                                     <img
                                         src="<?php echo esc_url($mv_sp['url']); ?>"
-                                        alt="#見つけて尾道レトロキャンペーン"
+                                        alt="<?php echo esc_attr($mv_pc['alt']); ?>"
                                         width="670"
                                         height="456" />
                                 </picture>

@@ -1,0 +1,86 @@
+@use "../global/" as g;
+
+.c-work-card {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+
+  @include g.mq(md) {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+}
+
+.c-work-card__link {
+  display: block;
+
+  &:hover {
+    // リンクにホバーしたら、中にある画像(img)を拡大する
+    .c-work-card__image img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.c-work-card__image {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  aspect-ratio: 16 / 9;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+.c-work-card__body {
+  background: g.$color-bg;
+  padding: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 8px 8px;
+
+  @include g.mq(md) {
+    padding: 40px 32px 24px;
+    min-height: 205px;
+  }
+}
+
+.c-work-card__tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include g.mq(md) {
+    gap: 12px;
+  }
+}
+
+.c-work-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+  margin-top: 8px;
+
+  @include g.mq(md) {
+    font-size: 24px;
+    letter-spacing: 2.56px;
+  }
+}
+
+.c-work-card__meta {
+  color: g.$color-text-sub;
+  font-family: g.$ff-en;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.48px;
+  margin-top: auto;
+
+  @include g.mq(md) {
+    font-size: 14px;
+    letter-spacing: 1.12px;
+  }
+}

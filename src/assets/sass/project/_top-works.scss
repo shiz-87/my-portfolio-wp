@@ -1,0 +1,70 @@
+@use "../global/" as g;
+
+.p-top-works {
+  padding-block: 64px 100px;
+
+  @include g.mq(md) {
+    padding-block: 100px 200px;
+  }
+}
+
+.p-top-works__slider-area {
+  margin-top: 40px;
+
+  @include g.mq(md) {
+    margin-top: 80px;
+  }
+}
+
+.p-top-works__swiper {
+  padding: 20px 10px;
+}
+
+.p-top-works__swiper-slide {
+  overflow: visible;
+}
+
+.p-top-works__prev,
+.p-top-works__next {
+  width: 32px;
+  height: 32px;
+  margin-top: 20px !important;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    @include g.mq(md) {
+      opacity: 0.7;
+    }
+  }
+
+  @include g.mq(md) {
+    width: 56px;
+    height: 56px;
+    margin-top: 0 !important;
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+.p-top-works__prev {
+  background: url(../img/icon-arrow-prev.svg) no-repeat center center / contain;
+  // Swiperのデフォルトスタイルを打ち消すため !important を使用
+  left: 0 !important;
+}
+
+.p-top-works__next {
+  background: url(../img/icon-arrow-next.svg) no-repeat center center / contain;
+  right: 0 !important;
+}
+
+.p-top-works__button {
+  text-align: center;
+  margin-top: 48px;
+
+  @include g.mq(md) {
+    margin-top: 64px;
+  }
+}
