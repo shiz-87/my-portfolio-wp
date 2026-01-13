@@ -10,13 +10,54 @@
     transform: translateY(0); // 元の位置に戻す
   }
 
-  // 0.2秒遅れて開始（左から2番目などに使用）
+  // 0.2秒遅れて開始
   &.u-delay-200 {
     transition-delay: 0.2s;
   }
 
-  // 0.4秒遅れて開始（左から3番目などに使用）
+  // 0.4秒遅れて開始
   &.u-delay-400 {
     transition-delay: 0.4s;
+  }
+
+  // 0.6秒遅れて開始
+  &.u-delay-600 {
+    transition-delay: 0.6s;
+  }
+
+  // 0.8秒遅れて開始
+  &.u-delay-800 {
+    transition-delay: 0.8s;
+  }
+}
+
+// 矢印のアニメーション（マスクアニメーション）
+.u-arrow-anim {
+  img {
+    transition: clip-path 3s cubic-bezier(0.22, 1, 0.36, 1);
+
+    // スマホ用（縦方向）
+    &.p-top-mv__arrow-sp {
+      clip-path: inset(0 0 100% 0); /* 上から下へ */
+    }
+
+    // PC用（横方向）
+    &.p-top-mv__arrow-pc {
+      clip-path: inset(0 100% 0 0); /* 左から右へ */
+    }
+  }
+
+  // 表示された時の状態（JSでクラス付与）
+  &.is-show {
+    img {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  // 遅延設定
+  &.u-delay-400 {
+    img {
+      transition-delay: 0.4s;
+    }
   }
 }
