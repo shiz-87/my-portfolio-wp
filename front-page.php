@@ -78,13 +78,18 @@
                         height="400" />
                 </div>
 
+                <?php
+                // AboutページのIDを指定
+                $about_page_id = 92;
+                $study_hours = get_field('total_study_hours', $about_page_id);
+                ?>
                 <div class="p-top-about__body u-fade-up u-delay-200">
                     <p class="p-top-about__name-en">SHIZUKA YAMAMOTO</p>
                     <h3 class="p-top-about__name-ja">山本 静<span>華</span></h3>
                     <p class="p-top-about__text">
                         静岡県浜松市出身。社会人経験を経て、「自分の手でモノを作り上げる仕事がしたい」という想いが強くなり、Webコーダーへの転身を決意しました。
                         いち早く現場で通用する技術を身につけるため、
-                        8月の学習開始から約4ヶ月間、毎日欠かさずPCに向かい、累計420時間の学習を積み重ねてきました。
+                        8月の学習開始から約4ヶ月間、毎日欠かさずPCに向かい、累計<?php echo esc_html($study_hours); ?>時間の学習を積み重ねてきました。
                         現在はWeb制作スクール「デイトラ」にて、ピクセルパーフェクトな実装と保守性の高い設計を追求。現場で通用する実務力を磨いています。
                     </p>
                     <div class="p-top-about__button">
