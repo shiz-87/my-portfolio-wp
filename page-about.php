@@ -39,10 +39,10 @@
             <!-- Strengthセクション -->
             <section class="p-about-strength">
                 <div class="p-about-strength__inner l-inner">
-                    <div class="p-about-strength__title c-section-title u-fade-up">
+                    <h2 class="p-about-strength__title c-section-title u-fade-up">
                         <span class="c-section-title__en">STRENGTH</span>
                         <span class="c-section-title__ja">強み</span>
-                    </div>
+                    </h2>
 
                     <div class="p-about-strength__card">
                         <ul class="p-about-strength__list">
@@ -101,10 +101,10 @@
             <!-- Visionセクション -->
             <section class="p-about-vision">
                 <div class="p-about-vision__inner l-inner">
-                    <div class="p-about-vision__title c-section-title u-fade-up">
+                    <h2 class="p-about-vision__title c-section-title u-fade-up">
                         <span class="c-section-title__en">VISION</span>
                         <span class="c-section-title__ja">将来像</span>
-                    </div>
+                    </h2>
 
                     <div class="p-about-vision__content">
                         <ul class="p-about-vision__list">
