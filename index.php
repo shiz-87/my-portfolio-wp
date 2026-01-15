@@ -1,277 +1,38 @@
 <?php get_header(); ?>
 
-<main class="l-main">
-    <!-- MVセクション -->
-    <section class="p-top-mv">
-        <div class="p-top-mv__inner l-inner">
+<main class="l-main" style="padding-top: 120px; min-height: 80vh;">
+    <div class="l-inner">
 
-            <!-- ボディビルダー -->
-            <div class="p-top-mv__bb-area">
-                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--black">
-                    ボディビルダーから
-                </div>
+        <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-                <div class="p-top-mv__bb-images">
-                    <figure class="p-top-mv__bb-img-back">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-bodybuilder-back.webp" alt="ボディビル大会の様子(バックポーズ)" width="360" height="580">
-                    </figure>
-                    <figure class="p-top-mv__bb-img-front">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-bodybuilder-front.webp" alt="ボディビル大会の様子(フロントポーズ)" width="500" height="780">
-                    </figure>
-                </div>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('u-mb-10'); ?>>
+                    <h2>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h2>
 
-            </div>
-            <!-- 矢印 -->
-            <div class="p-top-mv__arrow">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-arrow-down-orange.svg" alt="" width="" height="">
-            </div>
-
-            <!-- Webコーダー -->
-            <div class="p-top-mv__web-area">
-                <figure class="p-top-mv__web-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-web-coder.webp" alt="山本静華のポートレート" width="1280" height="1200">
-                </figure>
-
-                <div class="p-top-mv__vertical-label p-top-mv__vertical-label--white">
-                    WEBコーダーへ
-                </div>
-
-                <div class="p-top-mv__copy">
-                    <h1 class="p-top-mv__name">
-                        SHIZUKA<br>YAMAMOTO
-                    </h1>
-                    <p class="p-top-mv__portfolio">Portfolio.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /MVセクション -->
-
-    <!-- Aboutセクション -->
-    <section id="about" class="p-top-about">
-        <div class="p-top-about__inner l-inner">
-            <h2 class="p-top-about__title c-section-title u-fade-up">
-                <span class="c-section-title__en">ABOUT</span>
-                <span class="c-section-title__ja">私について</span>
-            </h2>
-
-            <div class="p-top-about__content">
-                <div class="p-top-about__image u-fade-up">
-                    <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/profile.png"
-                        alt="山本静華のプロフィール写真"
-                        width="400"
-                        height="400" />
-                </div>
-
-                <div class="p-top-about__body u-fade-up u-delay-200">
-                    <p class="p-top-about__name-en">SHIZUKA YAMAMOTO</p>
-                    <h3 class="p-top-about__name-ja">山本 静<span>華</span></h3>
-                    <p class="p-top-about__text">
-                        静岡県浜松市出身。社会人経験を経て、「自分の手でモノを作り上げる仕事がしたい」という想いが強くなり、Webコーダーへの転身を決意しました。
-                        いち早く現場で通用する技術を身につけるため、
-                        8月の学習開始から約4ヶ月間、毎日欠かさずPCに向かい、累計420時間の学習を積み重ねてきました。
-                        現在はWeb制作スクール「デイトラ」にて、ピクセルパーフェクトな実装と保守性の高い設計を追求。現場で通用する実務力を磨いています。
-                    </p>
-                    <div class="p-top-about__button">
-                        <a href="#" class="c-button"> 私について詳しく</a>
+                    <div class="entry-content">
+                        <?php the_excerpt(); ?>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /Aboutセクション -->
+                </article>
+                <hr>
 
-    <!-- Skillsセクション -->
-    <section id="skills" class="p-top-skills">
-        <div class="p-top-skills__inner l-inner">
-            <h2 class="p-top-skills__title c-section-title u-fade-up">
-                <span class="c-section-title__en">SKILLS</span>
-                <span class="c-section-title__ja">できること</span>
-            </h2>
+            <?php endwhile; ?>
 
-            <ul class="p-top-skills__list">
-                <li class="p-top-skills__item u-fade-up">
-                    <div class="c-skill-card">
-                        <div class="c-skill-card__header">
-                            <div class="c-skill-card__icon c-skill-card__icon--coding">
-                                <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-coding.svg"
-                                    alt="codingのアイコン"
-                                    width="80"
-                                    height="64" />
-                            </div>
-                            <h3 class="c-skill-card__title">Coding</h3>
-                            <span class="c-skill-card__subtitle">
-                                HTML / CSS / Sass / JavaScript / jQuery
-                            </span>
-                        </div>
-                        <p class="c-skill-card__text">
-                            デザインカンプからの忠実な再現（ピクセルパーフェクト）はもちろん、FLOCSSなどの設計思想に基づいた、改修しやすいCSS設計を心がけています。
-                            JavaScript/jQueryを用いた動的なUI実装も可能で、ユーザー体験を重視したスムーズな動きを実装します。
-                        </p>
-                    </div>
-                </li>
-
-                <li class="p-top-skills__item u-fade-up u-delay-200">
-                    <div class="c-skill-card">
-                        <div class="c-skill-card__header">
-                            <div class="c-skill-card__icon c-skill-card__icon--wordpress">
-                                <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-wordpress.svg"
-                                    alt="WordPressのアイコン"
-                                    width="64"
-                                    height="64" />
-                            </div>
-                            <h3 class="c-skill-card__title">WordPress</h3>
-                            <span class="c-skill-card__subtitle">
-                                PHP / Original Theme
-                            </span>
-                        </div>
-                        <p class="c-skill-card__text">
-                            HTML/CSSで作成した静的サイトのオリジナルテーマ化に対応します。
-                            カスタム投稿タイプやカスタムフィールドを活用し、「クライアント様が迷わず更新できる管理画面」の構築を大切にしています。納品後の運用コストを下げる設計を意識しています。
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- /Skillsセクション -->
-
-    <!-- Worksセクション -->
-    <section id="works" class="p-top-works">
-        <div class="p-top-works__inner l-inner">
-            <h2 class="p-top-works__title c-section-title u-fade-up">
-                <span class="c-section-title__en">WORKS</span>
-                <span class="c-section-title__ja">作品一覧</span>
-            </h2>
-
-            <!-- Swiper -->
-            <div class="p-top-works__slider-area u-fade-up">
-                <div id="js-top-works-swiper" class="swiper p-top-works__swiper">
-                    <div class="swiper-wrapper">
-                        <!-- スライド1枚目-->
-                        <div class="swiper-slide p-top-works__swiper-slide">
-                            <article class="c-work-card">
-                                <a href="#" class="c-work-card__link">
-                                    <figure class="c-work-card__image">
-                                        <img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/img/work-dummy01.png"
-                                            alt="ポートフォリオサイトのトップページ画像"
-                                            width="800"
-                                            height="450" />
-                                    </figure>
-                                    <div class="c-work-card__body">
-                                        <div class="c-work-card__tags">
-                                            <span class="c-label c-label--category">個人制作</span>
-                                            <span class="c-label c-label--role">Design & Coding</span>
-                                        </div>
-                                        <h3 class="c-work-card__title">ポートフォリオサイト</h3>
-                                        <p class="c-work-card__meta">
-                                            Coding / HTML, Sass, JS, WordPress
-                                        </p>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-
-                        <!-- スライド2枚目 -->
-                        <div class="swiper-slide p-top-works__swiper-slide">
-                            <article class="c-work-card">
-                                <a href="#" class="c-work-card__link">
-                                    <figure class="c-work-card__image">
-                                        <img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/img/works-onomichi-thumb.webp"
-                                            alt="尾道サイトのトップページ画像"
-                                            width="800"
-                                            height="450" />
-                                    </figure>
-                                    <div class="c-work-card__body">
-                                        <div class="c-work-card__tags">
-                                            <span class="c-label c-label--category">スクール課題</span>
-                                            <span class="c-label c-label--role">Coding</span>
-                                        </div>
-                                        <h3 class="c-work-card__title">
-                                            #見つけて尾道レトロキャンペーン
-                                        </h3>
-                                        <p class="c-work-card__meta">
-                                            Coding / HTML, Sass, JS, jQuery
-                                        </p>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-
-                        <!-- スライド3枚目 -->
-                        <div class="swiper-slide p-top-works__swiper-slide">
-                            <article class="c-work-card">
-                                <a href="#" class="c-work-card__link">
-                                    <figure class="c-work-card__image">
-                                        <img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/img/works-oha-thumb.webp"
-                                            alt="OHA!のトップページ画像"
-                                            width="800"
-                                            height="450" />
-                                    </figure>
-                                    <div class="c-work-card__body">
-                                        <div class="c-work-card__tags">
-                                            <span class="c-label c-label--category">スクール課題</span>
-                                            <span class="c-label c-label--role">Coding</span>
-                                        </div>
-                                        <h3 class="c-work-card__title">通話アプリOHA!</h3>
-                                        <p class="c-work-card__meta">
-                                            Coding / HTML, Sass, JS, jQuery
-                                        </p>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-
-                        <!-- スライド4枚目 -->
-                        <div class="swiper-slide p-top-works__swiper-slide">
-                            <article class="c-work-card">
-                                <a href="#" class="c-work-card__link">
-                                    <figure class="c-work-card__image">
-                                        <img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/img/works-sobolon-thumb.webp"
-                                            alt="Sobolonのトップページ画像"
-                                            width="800"
-                                            height="450" />
-                                    </figure>
-                                    <div class="c-work-card__body">
-                                        <div class="c-work-card__tags">
-                                            <span class="c-label c-label--category">スクール課題</span>
-                                            <span class="c-label c-label--role">Coding</span>
-                                        </div>
-                                        <h3 class="c-work-card__title">sobolon</h3>
-                                        <p class="c-work-card__meta">
-                                            Coding / HTML, Sass, JS, jQuery
-                                        </p>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                    </div>
-
-                    <!-- ナビゲーション -->
-                    <div
-                        id="js-top-works-prev"
-                        class="swiper-button-prev p-top-works__prev"></div>
-                    <div
-                        id="js-top-works-next"
-                        class="swiper-button-next p-top-works__next"></div>
-                </div>
+            <div class="pagination">
+                <?php the_posts_pagination( array(
+                    'prev_text' => '前へ',
+                    'next_text' => '次へ',
+                ) ); ?>
             </div>
 
-            <div class="p-top-works__button">
-                <a href="#" class="c-button">作品一覧を見る</a>
-            </div>
-        </div>
-    </section>
-    <!-- /Worksセクション -->
+        <?php else : ?>
+            <p>記事が見つかりませんでした。</p>
+        <?php endif; ?>
 
-    <?php get_template_part('template-parts/contact'); ?>
+    </div>
 </main>
 
 <?php get_footer(); ?>
