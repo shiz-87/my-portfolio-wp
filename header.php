@@ -6,20 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
-    <!-- 検索にヒットしないようにする -->
-    <meta name="robots" content="noindex" />
-
-    <!-- OGP -->
-    <meta property="og:title" content="SHIZUKA YAMAMOTO | PORTFOLIO" />
-    <meta
-        property="og:description"
-        content="静岡県浜松市在住。Webコーダーへの転職を目指すSHIZUKA YAMAMOTOのポートフォリオサイトです。学習成果としての制作実績やスキルセット（HTML/CSS/WordPress等）を掲載しています。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com/" />
-    <meta property="og:image" content="https://example.com/ogp/og-image.jpg" />
-    <meta property="og:site_name" content="SHIZUKA YAMAMOTO | PORTFOLIO" />
-    <meta property="og:locale" content="ja_JP" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
