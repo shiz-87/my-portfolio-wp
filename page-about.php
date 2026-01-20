@@ -108,44 +108,34 @@
 
                     <div class="p-about-vision__content">
                         <ul class="p-about-vision__list">
-                            <!-- 将来像1つ目 -->
-                            <li class="p-about-vision__item u-fade-up">
-                                <div class="p-about-vision__head">
-                                    <span class="p-about-vision__year">1年後</span>
-                                    <h3 class="p-about-vision__term">
-                                        「確実な実装力」で信頼を築く
-                                    </h3>
-                                </div>
-                                <p class="p-about-vision__text">
-                                    まずはコーダーとして、正確でミスのない実装を徹底します。開発フローを吸収しながらHTML/CSSの品質を高め、「山本に任せれば大丈夫」と言われる信頼関係をチーム内で築きます。
-                                </p>
-                            </li>
+                            <?php
+                            // 3年分のデータを配列として定義（グループフィールドを使用）
+                            $visions = [
+                                'delay-0'   => get_field('vision_1_group'), // 1年後のグループ
+                                'delay-200' => get_field('vision_2_group'), // 2年後のグループ
+                                'delay-400' => get_field('vision_3_group'), // 3年後のグループ
+                            ];
 
-                            <!-- 将来像2つ目 -->
-                            <li class="p-about-vision__item u-fade-up u-delay-200">
+                            foreach ($visions as $delay_class => $vision) :
+                                // データが入っていて、かつ見出し(term)がある場合のみ表示
+                                if ($vision && !empty($vision['term'])) :
+                            ?>
+                            <!-- 将来像 -->
+                            <li class="p-about-vision__item u-fade-up u-<?php echo esc_attr($delay_class); ?>">
                                 <div class="p-about-vision__head">
-                                    <span class="p-about-vision__year">2年後</span>
+                                    <span class="p-about-vision__year"><?php echo esc_html($vision['year']); ?>年後</span>
                                     <h3 class="p-about-vision__term">
-                                        実装の幅を広げ、技術を深める
+                                        <?php echo esc_html($vision['term']); ?>
                                     </h3>
                                 </div>
                                 <p class="p-about-vision__text">
-                                    静的な表示だけでなく、JavaScriptを用いた複雑な機能実装や、WordPressの高度なカスタマイズスキルを習得します。「動く・機能する」サイトを作れる技術者として、対応領域を広げます。
+                                    <?php echo nl2br(esc_html($vision['text'])); ?>
                                 </p>
                             </li>
-
-                            <!-- 将来像3つ目 -->
-                            <li class="p-about-vision__item u-fade-up u-delay-400">
-                                <div class="p-about-vision__head">
-                                    <span class="p-about-vision__year">3年後</span>
-                                    <h3 class="p-about-vision__term">
-                                        フロントエンドエンジニアへ
-                                    </h3>
-                                </div>
-                                <p class="p-about-vision__text">
-                                    モダンなフレームワーク（React/Vue.jsなど）やパフォーマンス最適化を学び、フロントエンドエンジニアへとステップアップします。UI/UXの視点も持ち、ユーザー体験を技術で最大化できる人材を目指します。
-                                </p>
-                            </li>
+                            <?php
+                                endif;
+                            endforeach;
+                            ?>
                         </ul>
                     </div>
                 </div>
