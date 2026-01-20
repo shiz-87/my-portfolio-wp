@@ -1,5 +1,9 @@
 @use "../global" as g;
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: g.$ff-ja;
   color: g.$color-text;

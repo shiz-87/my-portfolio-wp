@@ -3,7 +3,7 @@
 .p-header-nav {
   display: none;
 
-  @include g.mq(lg) {
+  @include g.mq(xl) {
     display: block;
   }
 }
@@ -15,12 +15,33 @@
 }
 
 .p-header-nav__link {
+  display: inline-block;
   font-family: g.$ff-en;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 1.28px;
+  position: relative;
 
-  @include g.hover-line();
+  &:hover::after {
+    transform: scaleX(1);
+  }
+
+  &::after {
+    background-color: g.$color-accent;
+    bottom: -8px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
+
+  @include g.mq(xl) {
+    font-size: 20px;
+  }
 }
 
 .p-header-nav__button {
@@ -28,4 +49,5 @@
   font-weight: 700;
   line-height: 1;
   letter-spacing: 1.28px;
+  font-size: 20px;
 }

@@ -8,7 +8,7 @@
   right: 20px;
   z-index: 9999;
 
-  @include g.mq(lg) {
+  @include g.mq(xl) {
     display: none;
   }
 
@@ -40,7 +40,9 @@
   height: 3px;
   background: g.$color-accent;
   border-radius: 6px;
-  transition: transform 0.4s, opacity 0.4s;
+  transition:
+    transform 0.4s,
+    opacity 0.4s;
 
   &:nth-of-type(2) {
     top: 9px;

@@ -1,84 +1,232 @@
 @use "../global" as g;
 
 .p-top-mv {
-  padding-block: 134px 64px;
+  padding-block: 126px 64px;
+  overflow: hidden;
+
+  @include g.mq(lg) {
+    padding-block: 170px 100px;
+  }
 }
 
 .p-top-mv__inner {
-  @include g.mq(md) {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include g.mq(lg) {
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    max-width: 1280px;
+    margin-inline: auto;
+    align-items: flex-start;
   }
 }
 
-.p-top-mv__content {
-  text-align: center;
+.p-top-mv__bb-area {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20px;
+  position: relative;
+  max-width: 400px;
+  margin-inline: auto;
 
-  @include g.mq(md) {
-    text-align: left;
-    width: calc(540 / 1080 * 100%);
+  @include g.mq(lg) {
+    flex-direction: row-reverse;
+    width: 42%;
+    min-width: 380px;
   }
 }
 
-.p-top-mv__title {
-  font-size: 24px;
+/* --- 共通：縦書きラベル --- */
+.p-top-mv__vertical-label {
+  writing-mode: vertical-rl;
   font-weight: 700;
-  line-height: 1.6;
-  letter-spacing: 0.96px;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  padding: 16px 8px;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &--black {
+    background-color: #333;
+    color: #fff;
+    flex-shrink: 0;
+    margin-right: 24px;
+
+    @include g.mq(lg) {
+      margin-right: 0;
+      margin-left: 24px;
+      font-size: 24px;
+    }
+  }
+
+  &--white {
+    background-color: #fff;
+    color: #333;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    @include g.mq(lg) {
+      right: auto;
+      left: 28px;
+      font-size: 24px;
+    }
+  }
+}
+
+.p-top-mv__bb-images {
+  position: relative;
+  flex-grow: 1;
+
+  @include g.mq(lg) {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  @include g.mq(xl) {
+    max-width: 440px;
+  }
+}
+
+.p-top-mv__bb-img-front {
+  width: 55%;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.p-top-mv__bb-img-back {
+  width: 40%;
+  position: absolute;
+  top: -16px;
+  right: 16px;
+  z-index: 1;
+  transform: rotate(10deg);
+  opacity: 0.9;
+}
+
+.p-top-mv__text {
+  @include g.mq(sm) {
+    font-size: 16px;
+  }
+}
+
+.p-top-mv__arrow {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 3; /* 写真より手前に表示 */
+  margin-inline: auto;
+
+  @include g.mq(lg) {
+    margin: 0;
+    flex-shrink: 0;
+    margin-top: 130px;
+    margin-right: 10px;
+  }
+}
+
+.p-top-mv__arrow-sp {
+  display: block;
+
+  @include g.mq(lg) {
+    display: none;
+  }
+}
+
+.p-top-mv__arrow-pc {
+  display: none;
+
+  @include g.mq(lg) {
+    display: block;
+  }
+}
+
+.p-top-mv__web-area {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+  margin-top: 10px;
+
+  @include g.mq(lg) {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  @include g.mq(xl) {
+    max-width: 660px;
+  }
+}
+
+.p-top-mv__web-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.p-top-mv__copy {
+  font-family: "Outfit", sans-serif;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+  text-align: left;
+
+  @include g.mq(lg) {
+    bottom: -40px;
+    left: 40px;
+    z-index: 10;
+    width: 100%;
+  }
+
+  @include g.mq(xl) {
+    bottom: 30px;
+  }
+}
+
+.p-top-mv__name {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 3.2px;
 
   @include g.mq(md) {
-    font-size: 34px;
+    font-size: 56px;
+    letter-spacing: 7.04px;
+  }
+
+  @include g.mq(xl) {
+    font-size: 88px;
+    letter-spacing: 7.04px;
+  }
+}
+
+.p-top-mv__portfolio {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 8px;
+  letter-spacing: 2.4px;
+  line-height: 100%;
+
+  @include g.mq(md) {
+    font-size: 18px;
+    letter-spacing: 3.12px;
   }
 
   @include g.mq(lg) {
     font-size: 40px;
-    letter-spacing: 1.6px;
-  }
-}
-
-.p-top-mv__text {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.7;
-  letter-spacing: 0.64px;
-  margin-top: 24px;
-
-  @include g.mq(sm) {
-    font-size: 16px;
-  }
-
-  @include g.mq(lg) {
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.72px;
-  }
-}
-
-.p-top-mv__button {
-  text-align: center;
-  margin-top: 40px;
-
-  @include g.mq(md) {
-    text-align: left;
-  }
-}
-
-.p-top-mv__image {
-  text-align: center;
-  margin-top: 48px;
-
-  @include g.mq(md) {
-    padding-top: 40px;
-    width: calc(540 / 1080 * 100%);
-  }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    @include g.mq(md) {
-      max-width: 600px;
-    }
+    letter-spacing: 6px;
   }
 }

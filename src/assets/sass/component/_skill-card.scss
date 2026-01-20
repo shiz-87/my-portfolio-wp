@@ -45,7 +45,7 @@
   font-weight: 700;
   line-height: 1;
   letter-spacing: 1.92px;
-  margin-top: 12px;
+  margin-top: 16px;
 
   @include g.mq(md) {
     font-size: 32px;
@@ -55,31 +55,33 @@
 }
 
 .c-skill-card__subtitle {
+  display: block;
   color: g.$color-text-sub;
   font-family: g.$ff-en;
   font-size: 12px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.5;
   letter-spacing: 0.48px;
   margin-top: 8px;
 
   @include g.mq(md) {
     font-size: 16px;
     letter-spacing: 0.64px;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
 
 .c-skill-card__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.8;
   letter-spacing: 0.56px;
-  margin-top: 24px;
+  margin-top: 32px;
+  text-align: justify;
 
   @include g.mq(md) {
     font-size: 16px;
     letter-spacing: 0.64px;
-    margin-top: 32px;
+    margin-top: 40px;
   }
 }

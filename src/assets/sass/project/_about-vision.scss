@@ -6,19 +6,16 @@
   padding-block: 64px 100px;
   /* キラキラのベース背景 */
   background-color: #ffffff;
-  background-image: radial-gradient(
-      at 0% 0%,
-      hsla(15, 100%, 85%, 1) 0px,
-      transparent 50%
-    ),
+  background-image:
+    radial-gradient(at 0% 0%, hsla(15, 100%, 85%, 1) 0px, transparent 50%),
     /* オレンジ（ブランド色） */
-      radial-gradient(at 50% 0%, hsla(45, 100%, 85%, 1) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(45, 100%, 85%, 1) 0px, transparent 50%),
     /* イエロー（イエベ春） */
-      radial-gradient(at 100% 0%, hsla(180, 80%, 90%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(180, 80%, 90%, 1) 0px, transparent 50%),
     /* ミント（先進性） */
-      radial-gradient(at 0% 100%, hsla(280, 80%, 90%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(280, 80%, 90%, 1) 0px, transparent 50%),
     /* ラベンダー（洗練） */
-      radial-gradient(at 100% 100%, hsla(200, 90%, 90%, 1) 0px, transparent 50%); /* スカイブルー（誠実） */
+    radial-gradient(at 100% 100%, hsla(200, 90%, 90%, 1) 0px, transparent 50%); /* スカイブルー（誠実） */
 
   background-size: 150% 150%;
   animation: vividAurora 12s ease infinite alternate;
@@ -38,9 +35,18 @@
 }
 
 .p-about-vision__content {
-  background: g.$color-bg;
-  padding: 36px 20px 36px 23px;
+  background: rgba(255, 255, 255, 0.6);
   margin-top: 40px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  padding: 36px 20px 36px 23px;
+  border-radius: 20px;
+
+  @include g.mq(md) {
+    margin-top: 80px;
+    padding: 48px 40px 48px 48px;
+  }
 
   @include g.mq(lg) {
     margin-top: 80px;
@@ -79,9 +85,9 @@
     border-radius: 50%;
 
     @include g.mq(md) {
-      width: 24px;
-      height: 24px;
-      left: -46px;
+      height: 16px;
+      left: -42px;
+      width: 16px;
     }
   }
 }
@@ -98,36 +104,43 @@
   line-height: 1;
   letter-spacing: 0.96px;
 
-  @include g.mq(lg) {
+  @include g.mq(md) {
     font-size: 14px;
     letter-spacing: 1.12px;
   }
 }
 
 .p-about-vision__term {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.56px;
   margin-top: 8px;
 
-  @include g.mq(lg) {
-    font-size: 24px;
+  @include g.mq(md) {
+    font-size: 20px;
     line-height: 1;
     letter-spacing: 0.96px;
     margin-top: 16px;
   }
+
+  @include g.mq(lg) {
+    font-size: 22px;
+  }
 }
 
 .p-about-vision__text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2;
   letter-spacing: 0.56px;
   margin-top: 8px;
 
-  @include g.mq(lg) {
+  @include g.mq(md) {
     font-size: 16px;
     letter-spacing: 0.64px;
-    width: calc(500 / 1080 * 100%);
+  }
+
+  @include g.mq(lg) {
+    width: 56.2962962963%;
   }
 }

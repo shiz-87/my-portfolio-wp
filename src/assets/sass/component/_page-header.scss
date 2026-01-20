@@ -1,0 +1,27 @@
+@use "../global/" as g;
+
+/* ============================================
+   Common Page Header (共通ページヘッダー)
+   ※作品一覧、詳細、Aboutなどのタイトルエリア
+============================================ */
+.c-page-header {
+  margin-top: 70px;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.c-page-header__title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.92px;
+  line-height: 1;
+  padding-block: 64px;
+  text-align: center;
+
+  @include g.mq(md) {
+    font-size: 40px;
+    letter-spacing: 3.2px;
+    padding-block: 100px;
+  }
+}

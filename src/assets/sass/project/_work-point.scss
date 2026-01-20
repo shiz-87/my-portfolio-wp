@@ -28,15 +28,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-block: 40px;
+    padding-block: 48px;
   }
 
-  /* 最初のアイテム: 上の余白を消す */
+  @include g.mq(lg) {
+    padding-block: 64px;
+  }
+
   &:first-child {
     padding-top: 0;
   }
 
-  /* 最後のアイテム: 線と下の余白を消す */
   &:last-child {
     border-bottom: none;
     padding-bottom: 0;
@@ -70,7 +72,7 @@
 }
 
 .p-work-point__title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.6;
   letter-spacing: 0.56px;
@@ -82,7 +84,7 @@
 }
 
 .p-work-point__text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2;
   letter-spacing: 0.56px;
   margin-top: 16px;

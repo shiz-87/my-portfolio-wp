@@ -1,10 +1,10 @@
 @use "../global/" as g;
 
 .p-about-profile {
-  padding-block: calc(64px + g.$header-height) 64px;
+  padding-block: 64px;
 
   @include g.mq(md) {
-    padding-block: calc(100px + g.$header-height) 100px;
+    padding-block: 80px 100px;
   }
 }
 
@@ -28,6 +28,7 @@
     width: calc(400 / 1080 * 100%);
     max-width: none;
     flex-shrink: 0;
+    margin-inline: 0;
   }
 
   img {
@@ -76,13 +77,13 @@
 }
 
 .p-about-profile__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 2;
   letter-spacing: 0.56px;
   margin-top: 24px;
 
-  @include g.mq(lg) {
+  @include g.mq(md) {
     font-size: 16px;
     letter-spacing: 0.64px;
     margin-top: 32px;
@@ -91,7 +92,7 @@
   p:nth-child(n + 2) {
     margin-top: 14px;
 
-    @include g.mq(lg) {
+    @include g.mq(md) {
       margin-top: 16px;
     }
   }

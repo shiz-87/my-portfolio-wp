@@ -1,8 +1,12 @@
+@use "../global/" as g;
+
 // 下からフワッと出すためのクラス
 .u-fade-up {
   opacity: 0;
   transform: translateY(30px); // 最初は少し下にずらしておく
-  transition: opacity 0.8s ease, transform 0.8s ease; // アニメーションの速度
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease; // アニメーションの速度
 
   // JSでこのクラスが付与されたら表示する
   &.is-show {
@@ -29,6 +33,11 @@
   &.u-delay-800 {
     transition-delay: 0.8s;
   }
+
+  // 1秒遅れて開始
+  &.u-delay-1000 {
+    transition-delay: 1s;
+  }
 }
 
 // 矢印のアニメーション（マスクアニメーション）
@@ -44,6 +53,10 @@
     // PC用（横方向）
     &.p-top-mv__arrow-pc {
       clip-path: inset(0 100% 0 0); /* 左から右へ */
+
+      @include g.mq(lg) {
+        clip-path: inset(0 100% 0 0);
+      }
     }
   }
 
@@ -51,6 +64,11 @@
   &.is-show {
     img {
       clip-path: inset(0 0 0 0);
+      &.p-top-mv__arrow-pc {
+        @include g.mq(lg) {
+          clip-path: inset(0 0 0 0);
+        }
+      }
     }
   }
 

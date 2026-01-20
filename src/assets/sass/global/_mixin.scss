@@ -1,18 +1,12 @@
 @use "sass:map";
 @use "variables" as *;
 
-/**
- * メディアクエリの定義
- */
 @mixin mq($bp: md) {
   @media screen and (min-width: #{map.get($breakpoints, $bp)}) {
     @content;
   }
 }
 
-/**
- * ホバーアニメーション（下線が中央から伸びる）
- */
 @mixin hover-line($color: $color-accent, $bottom: -8px) {
   display: inline-block;
   position: relative;

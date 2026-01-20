@@ -17,10 +17,11 @@
 
   @include g.mq(md) {
     margin-top: 80px;
+    padding: 56px;
   }
 
   @include g.mq(lg) {
-    padding: 64px;
+    padding: 80px;
   }
 }
 
@@ -38,12 +39,10 @@
     gap: 80px;
   }
 
-  /* 最初のアイテム: 上の余白を消す */
   &:first-child {
     padding-top: 0;
   }
 
-  /* 最後のアイテム: 線と下の余白を消す */
   &:last-child {
     border-bottom: none;
     padding-bottom: 0;
@@ -51,29 +50,41 @@
 }
 
 .p-work-overview__term {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.56px;
 
+  @include g.mq(md) {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+
   @include g.mq(lg) {
-    width: 120px;
+    flex-shrink: 0;
     font-size: 20px;
     letter-spacing: 0.8px;
-    flex-shrink: 0;
+    width: 180px;
   }
 }
 
 .p-work-overview__desc {
   color: g.$color-text-sub;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   letter-spacing: 0.56px;
 
-  @include g.mq(lg) {
+  @include g.mq(md) {
     font-size: 16px;
     line-height: 2;
     letter-spacing: 0.64px;
+  }
+
+  @include g.mq(lg) {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+    line-height: 2;
+    flex: 1;
   }
 }
 
