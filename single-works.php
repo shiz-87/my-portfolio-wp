@@ -306,7 +306,7 @@
                     </ul>
 
                     <div class="p-work-others__button">
-                        <a href="<?php echo esc_url(home_url('/#works')); ?>" class="c-button">作品一覧を見る</a>
+                        <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="c-button">作品一覧を見る</a>
                     </div>
                 </div>
             </aside>
