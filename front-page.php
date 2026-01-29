@@ -38,14 +38,14 @@
                     height="24">
             </div>
 
-            <!-- Webコーダー -->
+            <!-- Web制作者 -->
             <div class="p-top-mv__web-area">
                 <figure class="p-top-mv__web-img u-fade-up u-delay-600">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv-web-coder.webp" alt="山本静華のポートレート" width="1280" height="1200">
                 </figure>
 
                 <div class="p-top-mv__vertical-label p-top-mv__vertical-label--white u-fade-up u-delay-600">
-                    ＷＥＢコーダーへ
+                    ＷＥＢ制作者へ
                 </div>
             </div>
 
@@ -87,10 +87,10 @@
                     <p class="p-top-about__name-en">SHIZUKA YAMAMOTO</p>
                     <h3 class="p-top-about__name-ja">山本 静<span>華</span></h3>
                     <p class="p-top-about__text">
-                        静岡県浜松市出身。社会人経験を経て、「自分の手でモノを作り上げる仕事がしたい」という想いが強くなり、Webコーダーへの転身を決意しました。
+                        静岡県浜松市出身。社会人経験を経て、「自分の手でモノを作り上げる仕事がしたい」という想いが強くなり、WEB制作者への転身を決意しました。
                         いち早く現場で通用する技術を身につけるため、
                         8月の学習開始から約4ヶ月間、毎日欠かさずPCに向かい、累計<?php echo esc_html($study_hours); ?>時間の学習を積み重ねてきました。
-                        現在はWeb制作スクール「デイトラ」にて、ピクセルパーフェクトな実装と保守性の高い設計を追求。現場で通用する実務力を磨いています。
+                        現在はWEB制作スクール「デイトラ」にて、ピクセルパーフェクトな実装と保守性の高い設計を追求。現場で通用する実務力を磨いています。
                     </p>
                     <div class="p-top-about__button">
                         <a href="<?php echo esc_url(home_url('/about/')); ?>" class="c-button"> 私について詳しく</a>

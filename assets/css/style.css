@@ -1981,7 +1981,6 @@ body {
 .p-about-vision__term {
 	font-size: 20px;
 	letter-spacing: 0.96px;
-	line-height: 1;
 	margin-top: 16px;
 }
 
@@ -2292,6 +2291,7 @@ body {
 
 .p-about-vision__item {
 	display: flex;
+	gap: 20px;
 	justify-content: space-between;
 }
 

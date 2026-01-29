@@ -72,6 +72,7 @@
   @include g.mq(lg) {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
   }
 
   &::before {
@@ -119,7 +120,6 @@
 
   @include g.mq(md) {
     font-size: 20px;
-    line-height: 1;
     letter-spacing: 0.96px;
     margin-top: 16px;
   }
