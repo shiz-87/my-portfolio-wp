@@ -16,3 +16,9 @@
     margin-top: 80px;
   }
 }
+
+.p-top-skills__item {
+  @include g.mq(md) {
+    display: flex;
+  }
+}
